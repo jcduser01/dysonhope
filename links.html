@@ -1,0 +1,495 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dyson Hope — Links</title>
+  <meta name="description" content="Founder of SIGIL.ZERO Records. I make music. Then people dance." />
+
+  <!-- Icons (your existing stack) -->
+  <link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: rgba(15, 23, 42, 0.10);
+      --shadow: 0 12px 40px rgba(2, 6, 23, 0.10);
+      --tileShadow: 0 6px 18px rgba(0,0,0,0.12);
+      --tileShadowHover: 0 12px 28px rgba(0,0,0,0.18);
+      --max: 880px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      letter-spacing: 0.15px;
+    }
+    a{ color: inherit; text-decoration: none; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 16px 46px;
+    }
+
+    .panel{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    /* Profile header (hoo.be-like) */
+    .profile{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap: 10px;
+      padding: 6px 0 6px;
+    }
+
+    .avatar{
+      width: 104px;
+      height: 104px;
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      object-fit: cover;
+      display:block;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      box-shadow: 0 10px 26px rgba(2, 6, 23, 0.10);
+      background: #fff;
+    }
+
+    h1{
+      margin: 6px 0 0;
+      font-size: 26px;
+      line-height: 1.12;
+      letter-spacing: 0.3px;
+    }
+
+    .desc{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 56ch;
+    }
+
+    /* Icon buttons row */
+    .icons{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content:center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .icon-btn{
+      width: 44px;
+      height: 44px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(2, 6, 23, 0.06);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      user-select:none;
+    }
+    .icon-btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(2, 6, 23, 0.09);
+      border-color: rgba(15, 23, 42, 0.16);
+    }
+    .icon-btn i{
+      font-size: 18px;
+      color: #0f172a;
+      line-height: 1;
+    }
+
+    /* Section headings */
+    .section-title{
+      margin: 18px 2px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(15, 23, 42, 0.55);
+    }
+
+    /* --- HOO.BE–STYLE BLOCK GRID TILES (mixtapes) --- */
+    .tiles{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    @media (max-width: 640px){
+      .tiles{ grid-template-columns: 1fr; }
+    }
+
+    .tile{
+      position: relative;
+      height: 160px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: var(--tileShadow);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .tile:hover{
+      transform: translateY(-2px);
+      box-shadow: var(--tileShadowHover);
+    }
+
+    .tile .bg{
+      position:absolute;
+      inset:0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.02);
+    }
+
+    .tile .veil{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,0.10) 0%,
+          rgba(0,0,0,0.35) 55%,
+          rgba(0,0,0,0.65) 100%
+        );
+    }
+
+    .tile .content{
+      position:absolute;
+      inset:0;
+      padding: 14px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      color:#fff;
+    }
+
+    .tile .title{
+      margin:0;
+      font-size: 16px;
+      font-weight: 750;
+      line-height: 1.15;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+
+    .tile .sub{
+      margin: 4px 0 0;
+      font-size: 13px;
+      opacity: 0.88;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    }
+
+    .tile::after{
+      content: "↗";
+      position:absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 14px;
+      opacity: 0.65;
+      color: #fff;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      pointer-events: none;
+    }
+
+    /* --- FEATURED RELEASE TILE (one item, six choices) --- */
+    .feature{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 26px rgba(2,6,23,0.12);
+      background: #0b0b0d;
+      margin-top: 10px;
+    }
+
+    .feature-top{
+      position: relative;
+      min-height: 180px;
+      display:flex;
+      align-items:flex-end;
+      padding: 16px;
+      color: #fff;
+    }
+
+    .feature-top .bg{
+      position:absolute;
+      inset:0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.02);
+      filter: saturate(1.05) contrast(1.05);
+    }
+
+    .feature-top .veil{
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(900px 420px at 20% 18%, rgba(255,255,255,0.08), transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.78) 100%);
+    }
+
+    .feature-top .meta{
+      position: relative;
+      z-index: 1;
+      display:flex;
+      flex-direction:column;
+      gap: 6px;
+    }
+
+    .feature-kicker{
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .feature-title{
+      margin:0;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.15;
+      text-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    }
+
+    .feature-sub{
+      margin:0;
+      font-size: 13px;
+      opacity: 0.9;
+      text-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    }
+
+    .feature-links{
+      display:grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      padding: 14px;
+      background: #ffffff;
+    }
+
+    @media (max-width: 860px){
+      .feature-links{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 420px){
+      .feature-links{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .mini-link{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    gap: 4px;
+
+    height: 56px;              /* a bit taller for stacked content */
+    padding: 6px 4px;
+
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #fff;
+
+    box-shadow: 0 6px 14px rgba(2,6,23,0.06);
+    transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+
+    font-size: 11px;
+    font-weight: 650;
+    color: #0f172a;
+    text-align: center;
+
+    white-space: nowrap;
+    }
+
+    .mini-link:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(2,6,23,0.09);
+    border-color: rgba(15, 23, 42, 0.16);
+    }
+
+    .mini-link i{
+    font-size: 16px;
+    line-height: 1;
+    }
+
+    /* Footer block (your snippet) */
+    .footer-block{
+      margin-top: 18px;
+      padding-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+    .footer-block a{
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Keyboard focus */
+    a:focus-visible{
+      outline: 3px solid rgba(37, 99, 235, 0.35);
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="panel" aria-label="Dyson Hope link hub">
+      <header class="profile">
+        <img class="avatar" src="assets/images/img-mask-avatar-3xl.jpg" alt="Dyson Hope profile photo" />
+        <h1>Dyson Hope</h1>
+        <p class="desc">Founder of SIGIL.ZERO Records. I make music. Then people dance.</p>
+
+        <nav class="icons" aria-label="Platform links">
+          <a class="icon-btn" href="http://instagram.com/DysonHopeMusic" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a class="icon-btn" href="https://open.spotify.com/artist/61OXIOIVIfdZtFBZG4cY4J?si=xT6AT10GQ5CPuRu1Ahvf3A" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify">
+            <i class="fab fa-spotify"></i>
+          </a>
+          <a class="icon-btn" href="https://soundcloud.com/dyson-hope" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud">
+            <i class="fab fa-soundcloud"></i>
+          </a>
+          <a class="icon-btn" href="https://www.youtube.com/@DysonHope" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a class="icon-btn" href="https://dysonhope.bandcamp.com/" target="_blank" rel="noopener" aria-label="Bandcamp" title="Bandcamp">
+            <i class="fab fa-bandcamp"></i>
+          </a>
+          <a class="icon-btn" href="https://dysonhope.com" target="_blank" rel="noopener" aria-label="DysonHope.com" title="DysonHope.com">
+            <i class="bi bi-link-45deg"></i>
+          </a>
+          <a class="icon-btn" href="https://music.apple.com/us/artist/dyson-hope/1658448375" target="_blank" rel="noopener" aria-label="Apple Music" title="Apple Music">
+            <i class="fab fa-apple"></i>
+          </a>
+          <a class="icon-btn" href="https://music.amazon.com/artists/B0BP9TJ341/dyson-hope" target="_blank" rel="noopener" aria-label="Amazon Music" title="Amazon Music">
+            <i class="fab fa-amazon"></i>
+          </a>
+          <a class="icon-btn" href="https://facebook.com/dysonhopemusic" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </nav>
+      </header>
+
+      <div class="section-title">New Release</div>
+
+      <!-- Featured release: one tile containing 6 platform choices -->
+      <section class="feature" aria-label="Need More Drugs featured release">
+        <div class="feature-top">
+          <div class="bg" style="background-image:url('assets/images/need-more-drugs-cover-128.jpg');"></div>
+          <div class="veil"></div>
+          <div class="meta">
+            <div class="feature-kicker">Maxi Single</div>
+            <h2 class="feature-title">Dyson Hope & NOTOTO - Need More Drugs</h2>
+            <p class="feature-sub">SIGIL.ZERO Records</p>
+          </div>
+        </div>
+
+        <div class="feature-links" aria-label="Need More Drugs links">
+          <a class="mini-link" href="https://open.spotify.com/album/0lhFv9wzBzM7bPvyIS9RX6?referral=labelaffiliate&utm_source=1110lINEuLf&utm_medium=Indie_Distrokid&utm_campaign=labelaffiliate" target="_blank" rel="noopener" aria-label="Need More Drugs on Spotify">
+            <i class="fab fa-spotify"></i> Spotify
+          </a>
+          <a class="mini-link" href="https://soundcloud.com/dyson-hope/sets/need-more-drugs" target="_blank" rel="noopener" aria-label="Need More Drugs on SoundCloud">
+            <i class="fab fa-soundcloud"></i> SoundCloud
+          </a>
+          <a class="mini-link" href="https://dysonhope.bandcamp.com/album/need-more-drugs" target="_blank" rel="noopener" aria-label="Need More Drugs on Bandcamp">
+            <i class="fab fa-bandcamp"></i> Bandcamp
+          </a>
+          <a class="mini-link" href="https://www.youtube.com/watch?v=RTiFvysPD78&list=OLAK5uy_n5gNmgmybTDjmQeP64ZX5aI6hyJAfl6wQ" target="_blank" rel="noopener" aria-label="Need More Drugs on YouTube">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a class="mini-link" href="https://music.apple.com/us/album/need-more-drugs-ep/1855809964" target="_blank" rel="noopener" aria-label="Need More Drugs on Apple Music">
+            <i class="fab fa-apple"></i> Apple Music
+          </a>
+          <a class="mini-link" href="https://music.amazon.com/albums/B0G2ZK23MD" target="_blank" rel="noopener" aria-label="Need More Drugs on Amazon Music">
+            <i class="fab fa-amazon"></i> Amazon Music
+          </a>
+        </div>
+      </section>
+
+      <div class="section-title">Mixtapes</div>
+
+      <!-- Mixtapes: hoo.be-style tiles -->
+      <section class="tiles" aria-label="Mixtapes">
+        <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-denver" target="_blank" rel="noopener" aria-label="Live in Denver">
+          <div class="bg" style="background-image:url('https://i1.sndcdn.com/artworks-zNufW7rCTqAJQE12-qEtayQ-t1080x1080.png');"></div>
+          <div class="veil"></div>
+          <div class="content">
+            <p class="title">Live in Denver</p>
+            <p class="sub">Tech House Set</p>
+          </div>
+        </a>
+
+        <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-austin" target="_blank" rel="noopener" aria-label="Live in Austin">
+          <div class="bg" style="background-image:url('https://i1.sndcdn.com/artworks-nLiNVMOL6YjUECaV-24zg1Q-t1080x1080.png');"></div>
+          <div class="veil"></div>
+          <div class="content">
+            <p class="title">Live in Austin</p>
+            <p class="sub">Bass Music Set</p>
+          </div>
+        </a>
+
+        <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-art-car-bass" target="_blank" rel="noopener" aria-label="Art Car Bass (live at Burning Man 2025)">
+          <div class="bg" style="background-image:url('https://i1.sndcdn.com/artworks-MCHJp9VnmzEBb50d-Kboymw-t1080x1080.png');"></div>
+          <div class="veil"></div>
+          <div class="content">
+            <p class="title">Art Car Bass</p>
+            <p class="sub">Live at Burning Man 2025</p>
+          </div>
+        </a>
+
+        <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-sound-camp-house" target="_blank" rel="noopener" aria-label="Sound Camp House (live at Burning Man 2025)">
+          <div class="bg" style="background-image:url('https://i1.sndcdn.com/artworks-awKxZWwRG1QzLEVz-3tKzew-t1080x1080.png');"></div>
+          <div class="veil"></div>
+          <div class="content">
+            <p class="title">Sound Camp House</p>
+            <p class="sub">Live at Burning Man 2025</p>
+          </div>
+        </a>
+
+        <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-deep-playa-techno" target="_blank" rel="noopener" aria-label="Deep Playa Techno (live at Burning Man 2025)">
+          <div class="bg" style="background-image:url('https://i1.sndcdn.com/artworks-XG6NGqSz8kNpqFfA-Mzzphw-t1080x1080.png');"></div>
+          <div class="veil"></div>
+          <div class="content">
+            <p class="title">Deep Playa Techno</p>
+            <p class="sub">Live at Burning Man 2025</p>
+          </div>
+        </a>
+      </section>
+
+      <!-- Footer (your snippet) -->
+      <div class="footer-block">
+        <div class="col-12 col-lg text-center text-lg-left">
+          <p>&copy;
+            <script type="text/javascript">document.write(new Date().getFullYear());</script> Dyson
+            Hope, All Rights Reserved<br />Made with ♥️ in Austin, Texas<br /><a
+              href="mailto:info@dysonhope.com">info@dysonhope.com</a></a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+```
