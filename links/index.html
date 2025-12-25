@@ -85,6 +85,17 @@
       max-width: 56ch;
     }
 
+    .desc a{
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color .15s ease, text-decoration-color .15s ease;
+    }
+
+    .desc a:hover{
+      color: var(--text);
+      text-decoration-thickness: 2px;
+    }
+
     /* Icon buttons row */
     .icons{
       display:flex;
@@ -359,7 +370,7 @@
       <header class="profile">
         <img class="avatar" src="../assets/images/img-mask-avatar-3xl.jpg" alt="Dyson Hope profile photo" />
         <h1>Dyson Hope</h1>
-        <p class="desc">Founder of SIGIL.ZERO Records. I make music. Then people dance.</p>
+        <p class="desc">Founder of <a href="https://sigilzero.com" target="_blank" rel="noopener">SIGIL.ZERO Records</a>. I make music. Then people dance.</p>
 
         <nav class="icons" aria-label="Platform links">
           <a class="icon-btn" href="http://instagram.com/DysonHopeMusic" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
