@@ -341,6 +341,11 @@
     line-height: 1;
     }
 
+    .disabled-link {
+      pointer-events: none;
+      cursor: default;
+      color: rgb(175, 175, 175);
+    }
     /* Footer block (your snippet) */
     .footer-block{
       margin-top: 18px;
@@ -403,9 +408,42 @@
         </nav>
       </header>
 
-      <div class="section-title">New Release</div>
+      <div class="section-title">New Releases</div>
 
-      <!-- Featured release: one or two tiles containing 6 platform choices -->
+      <!-- Featured release: one or two tiles containing six platform choices -->
+      <section class="feature" aria-label="Edge of the Night featured release">
+        <div class="feature-top">
+          <div class="bg" style="background-image:url('../assets/images/edge-of-the-night-cover-128.jpg');"></div>
+          <div class="veil"></div>
+          <div class="meta">
+            <div class="feature-kicker">Single</div>
+            <h2 class="feature-title">Dyson Hope - Edge of the Night (coming March 24)</h2>
+            <p class="feature-sub">SIGIL.ZERO Records</p>
+          </div>
+        </div>
+
+        <div class="feature-links" aria-label="Edge of the Night links">
+          <a class="mini-link disabled-link" href="https://open.spotify.com/album/14TppZqOBVHtvYeLLo61Og?si=_3BDfnBFSeKzC0oLSCHi-g" target="_blank" rel="noopener" aria-label="Edge of the Night on Spotify">
+            <i class="fab fa-spotify"></i> Spotify
+          </a>
+          <a class="mini-link disabled-link" href="https://soundcloud.com/dyson-hope/got-a-body" target="_blank" rel="noopener" aria-label="Edge of the Night on SoundCloud">
+            <i class="fab fa-soundcloud"></i> SoundCloud
+          </a>
+          <a class="mini-link disabled-link" href="https://dysonhope.bandcamp.com/track/got-a-body" target="_blank" rel="noopener" aria-label="Edge of the Night on Bandcamp">
+            <i class="fab fa-bandcamp"></i> Bandcamp
+          </a>
+          <a class="mini-link disabled-link" href="https://youtu.be/2AHC65J_xUw?si=Z1Jc_T3LZtbIiSSi" target="_blank" rel="noopener" aria-label="Edge of the Night on YouTube">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a class="mini-link disabled-link" href="https://music.apple.com/us/album/got-a-body/1859086878" target="_blank" rel="noopener" aria-label="Edge of the Night on Apple Music">
+            <i class="fab fa-apple"></i> Apple Music
+          </a>
+          <a class="mini-link disabled-link" href="https://music.amazon.com/albums/B0G5F96WF3" target="_blank" rel="noopener" aria-label="Edge of the Night on Amazon Music">
+            <i class="fab fa-amazon"></i> Amazon Music
+          </a>
+        </div>
+      </section>
+
       <section class="feature" aria-label="Got a Body featured release">
         <div class="feature-top">
           <div class="bg" style="background-image:url('../assets/images/got-a-body-cover-128.jpg');"></div>
@@ -417,23 +455,23 @@
           </div>
         </div>
 
-        <div class="feature-links" aria-label="Need More Drugs links">
-          <a class="mini-link" href="https://open.spotify.com/album/14TppZqOBVHtvYeLLo61Og?si=_3BDfnBFSeKzC0oLSCHi-g" target="_blank" rel="noopener" aria-label="Got a Body on Spotify">
+        <div class="feature-links" aria-label="Edge of the Night links">
+          <a class="mini-link" href="https://open.spotify.com/album/14TppZqOBVHtvYeLLo61Og?si=_3BDfnBFSeKzC0oLSCHi-g" target="_blank" rel="noopener" aria-label="Edge of the Night on Spotify">
             <i class="fab fa-spotify"></i> Spotify
           </a>
-          <a class="mini-link" href="https://soundcloud.com/dyson-hope/got-a-body" target="_blank" rel="noopener" aria-label="Got a Body on SoundCloud">
+          <a class="mini-link" href="https://soundcloud.com/dyson-hope/got-a-body" target="_blank" rel="noopener" aria-label="Edge of the Night on SoundCloud">
             <i class="fab fa-soundcloud"></i> SoundCloud
           </a>
-          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/got-a-body" target="_blank" rel="noopener" aria-label="Got a Body on Bandcamp">
+          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/got-a-body" target="_blank" rel="noopener" aria-label="Edge of the Night on Bandcamp">
             <i class="fab fa-bandcamp"></i> Bandcamp
           </a>
-          <a class="mini-link" href="https://youtu.be/2AHC65J_xUw?si=Z1Jc_T3LZtbIiSSi" target="_blank" rel="noopener" aria-label="Need More Drugs on YouTube">
+          <a class="mini-link" href="https://youtu.be/2AHC65J_xUw?si=Z1Jc_T3LZtbIiSSi" target="_blank" rel="noopener" aria-label="Edge of the Night on YouTube">
             <i class="fab fa-youtube"></i> YouTube
           </a>
-          <a class="mini-link" href="https://music.apple.com/us/album/got-a-body/1859086878" target="_blank" rel="noopener" aria-label="Need More Drugs on Apple Music">
+          <a class="mini-link" href="https://music.apple.com/us/album/got-a-body/1859086878" target="_blank" rel="noopener" aria-label="Edge of the Night on Apple Music">
             <i class="fab fa-apple"></i> Apple Music
           </a>
-          <a class="mini-link" href="https://music.amazon.com/albums/B0G5F96WF3" target="_blank" rel="noopener" aria-label="Need More Drugs on Amazon Music">
+          <a class="mini-link" href="https://music.amazon.com/albums/B0G5F96WF3" target="_blank" rel="noopener" aria-label="Edge of the Night on Amazon Music">
             <i class="fab fa-amazon"></i> Amazon Music
           </a>
         </div>
@@ -474,7 +512,6 @@
 
       <div class="section-title">Mixtapes</div>
 
-      <!-- Mixtapes: hoo.be-style tiles -->
       <section class="tiles" aria-label="Mixtapes">
         <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-the-caribbean" target="_blank" rel="noopener" aria-label="Live in the Caribbean">
           <div class="bg" style="background-image:url('https://i1.sndcdn.com/artworks-89l8J8dNSOdIwTvC-5ZACZw-t1080x1080.png');"></div>
@@ -549,7 +586,6 @@
         </a>
       </section>
 
-      <!-- Footer (your snippet) -->
       <div class="footer-block">
         <div class="text-center col-12 col-lg text-lg-left">
           <p>&copy;
