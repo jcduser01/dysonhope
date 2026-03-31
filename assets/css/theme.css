@@ -4597,6 +4597,27 @@ div[class*='bg-spring-red'] .clients-grid li:after {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+@media (min-width: 768px) {
+  .listen-clients-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .listen-clients-grid li {
+    float: none;
+  }
+}
+
 .submit-result span {
   display: none;
   -webkit-transition: ease-out 0.2s;
