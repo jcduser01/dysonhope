@@ -388,3 +388,17 @@ a:focus-visible {
     outline-offset: 3px;
     border-radius: 12px;
 }
+
+/* Release & mixtape background images */
+.bg-drums-in-the-deep  { background-image: url('../assets/images/drums-in-the-deep-cover-128.jpg'); }
+.bg-afterphase         { background-image: url('../assets/images/afterphase-cover-128.jpg'); }
+.bg-bounce-ritual      { background-image: url('../assets/images/bounce-ritual-cover-128.jpg'); }
+.bg-edge-of-the-night  { background-image: url('../assets/images/edge-of-the-night-cover-128.jpg'); }
+.bg-got-a-body         { background-image: url('../assets/images/got-a-body-cover-128.jpg'); }
+.bg-live-caribbean     { background-image: url('https://i1.sndcdn.com/artworks-89l8J8dNSOdIwTvC-5ZACZw-t1080x1080.png'); }
+.bg-live-denver        { background-image: url('https://i1.sndcdn.com/artworks-zNufW7rCTqAJQE12-qEtayQ-t1080x1080.png'); }
+.bg-live-austin        { background-image: url('https://i1.sndcdn.com/artworks-nLiNVMOL6YjUECaV-24zg1Q-t1080x1080.png'); }
+.bg-art-car-bass       { background-image: url('https://i1.sndcdn.com/artworks-MCHJp9VnmzEBb50d-Kboymw-t1080x1080.png'); }
+.bg-sound-camp-house   { background-image: url('https://i1.sndcdn.com/artworks-awKxZWwRG1QzLEVz-3tKzew-t1080x1080.png'); }
+.bg-deep-playa-techno  { background-image: url('https://i1.sndcdn.com/artworks-XG6NGqSz8kNpqFfA-Mzzphw-t1080x1080.png'); }
+.bg-matrix-rave        { background-image: url('https://i1.sndcdn.com/artworks-oZLHUzA9rSPbAnL5-kPPN8w-t500x500.jpg'); }
