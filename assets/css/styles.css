@@ -1,0 +1,59 @@
+html, body { height: auto; }
+body { padding-bottom: 176px; }
+
+#spotify-player { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1050; background: #121212; padding: 8px 16px; box-shadow: 0 -2px 12px rgba(0,0,0,0.6); }
+#spotify-player iframe { display: block; border-radius: 12px; }
+
+.timeline-entry-media { display: flex; align-items: flex-start; gap: 1.25rem; }
+.timeline-entry-media > a { flex: 0 0 auto; }
+.timeline-entry-media img { width: 128px; height: 128px; object-fit: cover; }
+.timeline-entry-copy { flex: 1 1 auto; }
+
+@media (max-width: 576px) {
+    .timeline-entry-media { flex-direction: column; }
+}
+
+/* Footer platform icon buttons */
+.footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* On small phones, force a clean 5-column grid (2 rows of 5) */
+@media (max-width: 575px) {
+    .footer-icons {
+        display: grid;
+        grid-template-columns: repeat(5, 36px);
+    }
+}
+
+.footer-icon-btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    transition: opacity .15s ease;
+}
+
+.footer-icon-btn:hover { opacity: 0.8; }
+
+.footer-icon-btn i {
+    font-size: 16px;
+    line-height: 1;
+    color: #0f172a;
+}
+
+.footer-icon-btn .icon-beatport {
+    display: block;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
