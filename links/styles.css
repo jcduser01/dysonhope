@@ -402,3 +402,56 @@ a:focus-visible {
 .bg-sound-camp-house   { background-image: url('https://i1.sndcdn.com/artworks-awKxZWwRG1QzLEVz-3tKzew-t1080x1080.png'); }
 .bg-deep-playa-techno  { background-image: url('https://i1.sndcdn.com/artworks-XG6NGqSz8kNpqFfA-Mzzphw-t1080x1080.png'); }
 .bg-matrix-rave        { background-image: url('https://i1.sndcdn.com/artworks-oZLHUzA9rSPbAnL5-kPPN8w-t500x500.jpg'); }
+
+/* CTA booking / contact buttons */
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0 6px;
+}
+
+.cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 20px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease, border-color .14s ease;
+}
+
+.cta-btn--primary {
+    background: var(--text);
+    border-color: var(--text);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+}
+.cta-btn--primary:hover {
+    background: #1e293b;
+    border-color: #1e293b;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.22);
+}
+
+.cta-btn--secondary {
+    background: #fff;
+    border-color: var(--border);
+    color: var(--text);
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.06);
+}
+.cta-btn--secondary:hover {
+    border-color: rgba(15, 23, 42, 0.20);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.09);
+}
+
+@media (min-width: 540px) {
+    .cta-group { flex-direction: row; }
+    .cta-btn   { flex: 1; }
+}
