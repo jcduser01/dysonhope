@@ -45,7 +45,9 @@ In 2026 he founded **SIGIL.ZERO Records**, an underground electronic imprint wit
 
 ## Connect
 
-- **Email:** [info@dysonhope.com](mailto:info@dysonhope.com)
+- **Booking:** [booking@dysonhope.com](mailto:booking@dysonhope.com)
+- **Production / collaboration:** [studio@dysonhope.com](mailto:studio@dysonhope.com)
+- **General:** [info@dysonhope.com](mailto:info@dysonhope.com)
 - **Facebook:** [DysonHopeMusic](https://facebook.com/DysonHopeMusic)
 - **Instagram:** [DysonHopeMusic](https://instagram.com/DysonHopeMusic)
 - **Label:** [sigilzero.com](https://sigilzero.com)
@@ -54,150 +56,79 @@ In 2026 he founded **SIGIL.ZERO Records**, an underground electronic imprint wit
 
 ## Tech Stack
 
-- HTML5 / CSS3 / JavaScript
-- [Bootstrap 5](https://getbootstrap.com)
-- [jQuery](https://jquery.com)
-- [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
-- [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
-- [SAL (Scroll Animation Library)](https://mciastek.github.io/sal/)
-- [Font Awesome](https://fontawesome.com)
-- [Bootstrap Icons](https://icons.getbootstrap.com)
-- Custom SCSS theme
+The site is a hand-built static site — no framework, no JavaScript libraries, and no build step.
+
+- **HTML5** — three standalone pages, no templating.
+- **CSS** — a single hand-written design system in `assets/css/dysonhope.css` (CSS custom properties for color, type, spacing, and motion), supplemented by small page-specific `<style>` blocks inlined in each page's `<head>`.
+- **Typography** — Google Fonts: [Archivo](https://fonts.google.com/specimen/Archivo) (display), [Inter](https://fonts.google.com/specimen/Inter) (body), and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (labels/meta).
+- **Icons** — [Font Awesome](https://fontawesome.com) (webfont via `css/all.css`). The brand mark and wordmark are inline SVG.
+- **Media** — a looping MP4 video hero (`assets/video/hero-loop.mp4`) with a static poster image fallback; a Spotify embed player on the homepage.
+- **Analytics** — [Google Tag Manager](https://tagmanager.google.com) (container `GTM-5T87PLM6`). Interactive elements carry declarative `data-track` / `data-*` attributes (see [Analytics](#analytics)).
+
+There is **no** Bootstrap, jQuery, carousel/lightbox/scroll-animation library, SCSS toolchain, or server-side code. Earlier versions of this site shipped a purchased HTML template with that stack; it has been fully removed.
+
+### Repository layout
+
+```
+.
+├── index.html              # homepage
+├── calendar/index.html     # booking-calendar interstitial (redirect)
+├── links/index.html        # link-in-bio hub
+├── CNAME                    # custom domain (dysonhope.com)
+└── assets/
+    ├── css/dysonhope.css    # the design system (only stylesheet)
+    ├── images/              # covers, favicon, hero poster, textures
+    ├── video/hero-loop.mp4  # homepage hero loop
+    ├── svg/                 # brand logo source files
+    ├── press/               # press kit (logos, photo, zip)
+    └── plugins/font-awesome # icon webfont (css/ + webfonts/)
+```
 
 ---
 
 ## Development
 
-The site is a static HTML/CSS/JS website. No build step is required to view the site — open `index.html` directly in a browser or serve from any static host.
+No build step is required. Edit the HTML/CSS directly.
 
-To compile SCSS:
+- **View locally:** open `index.html` in a browser, or serve the folder from any static server, e.g.:
 
-```bash
-sass assets/css/scss/theme.scss assets/css/theme.css
-```
+  ```bash
+  python3 -m http.server 8000
+  # then visit http://localhost:8000
+  ```
 
-### Site Pages and Features
+  A static server (rather than `file://`) is recommended so that relative links between `/`, `/links/`, and `/calendar/` resolve the way they do in production.
 
-- `index.html`: Main artist site with hero, platform links, timeline, booking/contact CTAs, and footer social links.
-- `links/index.html`: Link hub page with release-level outbound links and mixtape links.
-- `calendar/index.html`: Redirect landing page for studio session booking (meta-refresh + fallback link).
-- Persistent Spotify embed player bar on the homepage (`#spotify-player`).
+- **Deploy:** the site is served via GitHub Pages on the custom domain in `CNAME` (`dysonhope.com`). Pushing to the default branch publishes it; there is nothing to compile.
 
-### Contact and Booking Flow
+### Site pages and features
 
-- Booking requests route to `booking@dysonhope.com` mailto CTAs.
-- Studio/collaboration requests route to `studio@dysonhope.com` mailto CTAs.
-- General contact appears as `info@dysonhope.com` on the links hub.
+- **`index.html`** — main artist page: video hero, statement bar, **Listen** (platform links + Spotify embed), **Works** (release grid), about/interlude, **Contact** (mailto CTAs), and a social/connections footer. Single-page anchor nav (`#home`, `#listen`, `#works`, `#contact`).
+- **`links/index.html`** — "link in bio" hub with featured releases (per-platform outbound links) and streaming/social tiles. Self-contained inline styling on top of the shared design system.
+- **`calendar/index.html`** — a branded interstitial that auto-redirects (3s `meta refresh` + JS fallback) to the Google Appointments booking calendar. It is intentionally unlisted (the homepage nav link is commented out) and reached as a direct/shared link.
 
----
+### Contact and booking flow
 
-## Tracking Instrumentation (May 2026)
+All contact is handled via `mailto:` links — there is no form or backend.
 
-This site now includes first-party tracking instrumentation for outbound links, CTAs, page/section views, and embedded player engagement intent.
-
-Important:
-
-- No Google Analytics, GTM, Meta Pixel, or other third-party trackers are embedded in site code.
-- Events are pushed to `window.dataLayer` only.
-
-### Files Added/Updated
-
-- Added `assets/js/tracking.js`
-- Updated `index.html`
-- Updated `links/index.html`
-
-### Event Contract
-
-All tracking events are normalized to:
-
-```js
-{
-  event: "dysonhope_event",
-  entity: "...",
-  action: "...",
-  target: "...",
-  platform: "...",
-  page_type: "...",
-  link_url: "...",
-  link_text: "...",
-  release_title: "...",
-  mix_title: "...",
-  cta_type: "..."
-}
-```
-
-Undefined, null, and empty-string values are removed before push.
-
-### Debug Mode
-
-Use query param `?debug_tracking=true` on any page, for example:
-
-- `index.html?debug_tracking=true`
-- `links/index.html?debug_tracking=true`
-
-When enabled, tracking logs clear event output in the browser console.
-
-### Declarative Tracking Attributes
-
-Tracked elements use HTML data attributes, including:
-
-- `data-track="true"`
-- `data-entity`
-- `data-action`
-- `data-target`
-- `data-platform`
-- `data-page-type`
-- `data-release-title`
-- `data-mix-title`
-- `data-cta-type`
-
-Embed interaction containers use:
-
-- `data-embed-track="true"`
-
-### Implemented Tracking
-
-- Page view: `site/view/home`
-- Page view: `site/view/links`
-- Section view: `site/view/timeline` (IntersectionObserver, once per page load)
-- CTA clicks: booking, studio_work, email
-- Platform/store clicks: spotify, apple_music, youtube_music, soundcloud, beatport, bandcamp
-- Social clicks: instagram
-- Spotify embed engagement intent: `release/play/spotify_embed` (once per player per page load)
-
-### SoundCloud Embed Status
-
-SoundCloud embed interaction tracking (`mix/play/soundcloud_embed`) is supported by the tracking utility, but there are currently no SoundCloud iframe embeds in the checked-in HTML. The event will fire once a SoundCloud embed container is added with `data-embed-track="true"` and corresponding `data-*` metadata.
-
-### Privacy and Safety Guardrails
-
-- Tracking does not block navigation.
-- Tracking does not delay outbound clicks.
-- Tracking gracefully no-ops if `window.dataLayer` is unavailable.
-- URL sanitization strips query/hash and excludes `mailto:`, `tel:`, `sms:`, and `javascript:` URLs from `link_url`.
-- Text sanitization drops values that look like emails or phone numbers.
-- `link_text` prefers visible text and falls back to `aria-label`, `title`, or image `alt` for icon/image links.
-
-### Notes
-
-- Embed interaction events are engagement-intent proxies and do not guarantee media playback.
+- **Booking** requests → `booking@dysonhope.com`
+- **Production / collaboration** requests → `studio@dysonhope.com`
+- **General** contact (links hub) → `info@dysonhope.com`
 
 ---
 
-## Changelog
+## Analytics
 
-### 2026-05-25
+Page analytics run through **Google Tag Manager** (container `GTM-5T87PLM6`), loaded on all three pages with the standard `<noscript>` fallback. GTM is the only third-party script embedded in the site.
 
-- Added first-party tracking utility in `assets/js/tracking.js`.
-- Added declarative tracking attributes across homepage and links hub for CTA, platform, store, social, release, and mix interactions.
-- Added delegated click tracking for all `data-track="true"` elements.
-- Added page-view tracking for home and links pages.
-- Added timeline section view tracking with IntersectionObserver and once-per-load behavior.
-- Added Spotify embed engagement-intent tracking (`release/play/spotify_embed`) with once-per-player behavior.
-- Added SoundCloud embed tracking support in utility (`mix/play/soundcloud_embed`) for future embed containers.
-- Added payload sanitization and privacy guardrails for event fields.
-- Added debug mode via `?debug_tracking=true`.
-- Updated README to document site pages/features, contact flow, tracking model, and QA outcomes.
+To support event mapping in the tag manager, interactive elements (CTAs, platform/store links, social links, release/mix items) carry declarative data attributes that describe the interaction:
+
+- `data-track="true"` — marks an element for click tracking
+- `data-entity`, `data-action`, `data-target` — the event taxonomy
+- `data-platform`, `data-page-type` — context
+- `data-release-title`, `data-mix-title`, `data-cta-type` — payload detail
+
+These attributes are consumed by GTM; no first-party tracking script is checked into the repo.
 
 ---
 
