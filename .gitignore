@@ -1,6 +1,3 @@
-#omit macOS system files
-.DS_Store
-
 # omit standard development directories and files
 node_modules/
 /triage/
@@ -23,10 +20,11 @@ package-lock.json
 .turbo/
 .eslintcache
 .pnpm-store
+.vscode/
 .vscode-test/
 .claude
 
-# do not commit .env files or any files that end with `.env`
+# do not commit any files that end with `.env`
 *.env
 
 packages/astro/src/**/*.prebuilt.ts
