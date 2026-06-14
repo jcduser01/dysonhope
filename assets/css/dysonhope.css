@@ -187,7 +187,7 @@ section{position:relative;border-top:1.5px solid var(--line)}
 
 /* ---------- CONTACT / PERFORMANCE ---------- */
 .book{position:relative;overflow:hidden;border:1.5px solid var(--line);display:grid;grid-template-columns:.9fr 1.5fr;background:radial-gradient(70% 130% at 88% 12%,rgba(156,151,244,.16),transparent 60%),var(--surface)}
-.book::after{content:"";position:absolute;inset:0;z-index:0;background:url(../images/gen/sel-metal.png) center/cover;opacity:.12;mix-blend-mode:luminosity;pointer-events:none}
+.book::after{content:"";position:absolute;inset:0;z-index:0;background:url(../images/sel-metal.png) center/cover;opacity:.12;mix-blend-mode:luminosity;pointer-events:none}
 .book>*{position:relative;z-index:1}
 .book .lead{padding:clamp(28px,4vw,48px);border-right:1.5px solid var(--line)}
 .book .lead h2{font-size:clamp(1.7rem,3.4vw,2.6rem);margin-bottom:14px}
