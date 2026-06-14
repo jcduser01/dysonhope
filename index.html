@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-5T87PLM6');</script>
-	<!-- End Google Tag Manager -->
+	<!-- Cookie consent + GTM loader -->
+	<script>
+	(function(){
+	  var CONSENT_KEY='dh_cookie_consent';
+	  var GTM_ID='GTM-5T87PLM6';
+	  function loadGTM(){
+	    window.dataLayer=window.dataLayer||[];
+	    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+	    var f=document.getElementsByTagName('script')[0],j=document.createElement('script');
+	    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+GTM_ID;
+	    f.parentNode.insertBefore(j,f);
+	  }
+	  window.dhConsent={
+	    accept:function(){localStorage.setItem(CONSENT_KEY,'accepted');loadGTM();dhConsent._hide()},
+	    decline:function(){localStorage.setItem(CONSENT_KEY,'declined');dhConsent._hide()},
+	    _hide:function(){var b=document.getElementById('dh-cookie-bar');if(b)b.style.display='none'}
+	  };
+	  var saved=localStorage.getItem(CONSENT_KEY);
+	  if(saved==='accepted'){loadGTM()}
+	  else if(!saved){document.addEventListener('DOMContentLoaded',function(){
+	    var b=document.getElementById('dh-cookie-bar');if(b)b.style.display='flex';
+	  })}
+	})();
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Dyson Hope — electronic music producer, DJ, and founder of SIGIL.ZERO Records.">
@@ -37,10 +54,14 @@
 	<link rel="stylesheet" href="assets/css/dysonhope.css">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5T87PLM6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!-- Cookie consent bar -->
+<div id="dh-cookie-bar" role="dialog" aria-label="Cookie consent" aria-live="polite" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--ground-2);border-top:1.5px solid var(--line-2);padding:16px clamp(22px,3.6vw,46px);align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+  <p style="margin:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-2);max-width:60ch;"><span style="color:var(--accent);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-right:12px;">[ Analytics ]</span>This site uses Google Analytics to understand how visitors engage with the music. No personal data is sold or shared. <a href="/privacy/" style="color:var(--text);border-bottom:1px solid var(--line-2);">Privacy policy</a>.</p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="dhConsent.decline()" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1.5px solid var(--line-2);color:var(--text-2);padding:9px 18px;cursor:pointer;">Decline</button>
+    <button onclick="dhConsent.accept()" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);border:1.5px solid var(--accent);color:var(--accent-ink);padding:9px 18px;cursor:pointer;">Accept</button>
+  </div>
+</div>
 
 <a href="#listen" class="skip">Skip to content</a>
 <div class="wrap">
@@ -353,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="foot-base">
       <span class="c">SIGIL.ZERO &mdash; SIGNAL INTEGRITY</span>
       <div class="barcode" aria-hidden="true"></div>
-      <span class="c">DYSON HOPE &copy; MMXXVI</span>
+      <span class="c"><a href="/privacy/" style="color:inherit;border-bottom:1px solid var(--line-2);">Privacy</a> &nbsp;&middot;&nbsp; DYSON HOPE &copy; MMXXVI</span>
     </div>
   </div>
 </footer>
