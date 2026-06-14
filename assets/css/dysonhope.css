@@ -244,6 +244,7 @@ footer{border-top:1.5px solid var(--line);background:var(--ground-2)}
 .foot-cell:last-child{border-right:0}
 .foot .wmlogo{height:22px;width:auto;display:block;margin-bottom:18px}
 .foot .wmlogo path,.foot .wmlogo polygon{fill:var(--text)}
+footer .foot-top .wmlogo path,footer .foot-top .wmlogo polygon{fill:var(--text)}
 .foot .made{color:var(--text-2);font-size:.92rem;font-weight:500}
 .foot .made .hr{color:var(--warm)}
 .foot .copy{color:var(--text-3);font-size:.78rem;margin-top:8px;font-family:var(--mono);letter-spacing:.03em}
@@ -251,6 +252,7 @@ footer{border-top:1.5px solid var(--line);background:var(--ground-2)}
 .foot .chan-group{padding:22px 0;border-top:1.5px solid var(--line-2)}
 .foot .chan-group:first-of-type{border-top:0;padding-top:0}
 .foot .chan-group:last-child{padding-bottom:0}
+footer .foot-top .foot-cell:nth-child(2) .chan-group + .chan-group{margin-top:11px}
 .foot .label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);margin:0 0 12px;display:block}
 .foot a.chan{display:inline-block;color:var(--text);font-size:1.02rem;font-weight:600;letter-spacing:-.01em;border-bottom:1.5px solid var(--line-2);padding-bottom:4px;transition:color .3s var(--ease),border-color .3s var(--ease)}
 .foot a.chan:hover{color:var(--accent);border-bottom-color:var(--accent)}
