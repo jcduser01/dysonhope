@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 1920 1920.01">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke-dasharray: 131.25 150 0 0;
+        stroke-width: 18.75px;
+      }
+
+      .st0, .st1, .st2 {
+        fill: #fff;
+      }
+
+      .st0, .st2 {
+        fill-rule: evenodd;
+        stroke: #000;
+        stroke-linejoin: round;
+      }
+
+      .st2 {
+        stroke-dasharray: 131.25 150 0 0;
+        stroke-width: 18.75px;
+      }
+    </style>
+  </defs>
+  <g id="Layer2">
+    <rect class="st1" width="1920" height="1920.01"/>
+  </g>
+  <g id="Layer1">
+    <g>
+      <path d="M960,97.12l747.27,431.44v862.88l-747.27,431.44-747.27-431.44v-862.88L960,97.12ZM960,302.06l-569.79,328.97v657.94l569.79,328.97,569.79-328.97v-657.94l-569.79-328.97Z"/>
+      <g>
+        <path class="st2" d="M960.22,962.63l-569.79-328.97,569.79,328.97Z"/>
+        <path class="st0" d="M960.12,962.07l569.79-328.97-569.79,328.97Z"/>
+        <path class="st0" d="M959.54,1621.7v-657.94s0,657.94,0,657.94Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
