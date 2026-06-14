@@ -1,345 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5T87PLM6');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dyson Hope Links</title>
-  <meta name="description" content="Founder of SIGIL.ZERO Records. I make music. Then people dance." />
-
-  <!-- Icons (your existing stack) -->
-  <link href="../assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="../assets/plugins/font-awesome/css/all.css" rel="stylesheet" />
-  <link href="styles.css" rel="stylesheet" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5T87PLM6');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dyson Hope — Links</title>
+<meta name="description" content="Founder of SIGIL.ZERO Records. I make music. Then people dance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/plugins/font-awesome/css/all.css">
+<link rel="stylesheet" href="../assets/css/dysonhope.css">
+<style>
+.lh{max-width:880px;margin:0 auto;padding:0 clamp(14px,3.4vw,36px) clamp(56px,8vw,88px)}
+.lh-head{padding:clamp(40px,7vw,72px) 0 clamp(26px,4vw,38px);text-align:center}
+.lh-avatar{width:120px;height:120px;object-fit:cover;border:1.5px solid var(--line-2);filter:grayscale(.2) contrast(1.05);margin:0 auto 22px;display:block}
+.lh-head h1{font-size:clamp(2.3rem,8vw,3.4rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.95}
+.lh-desc{color:var(--text-2);max-width:44ch;margin:14px auto 0;font-size:1rem}
+.lh-desc a{color:var(--text);border-bottom:1.5px solid var(--accent)}
+.lh-desc a:hover{color:var(--accent)}
+.icons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.icon-btn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--line-2);color:var(--text-2);font-size:1.12rem;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.icon-btn:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.icon-btn svg{width:17px;height:17px;fill:currentColor}
+.lh-cta{display:flex;flex-direction:column;border:1.5px solid var(--line);margin:clamp(26px,4vw,38px) 0 0}
+.lh-cta .btn{justify-content:center;border:0;border-bottom:1.5px solid var(--line)}
+.lh-cta .btn:last-child{border-bottom:0}
+.section-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin:clamp(38px,5vw,56px) 0 16px;padding-bottom:12px;border-bottom:1.5px solid var(--line)}
+.section-title b{color:var(--accent);font-weight:500}
+.feature{border:1.5px solid var(--line);margin-bottom:16px}
+.feature-top{display:flex;align-items:stretch;border-bottom:1.5px solid var(--line)}
+.feature-cover{width:104px;height:104px;object-fit:cover;border-right:1.5px solid var(--line);flex:none;filter:grayscale(.15) contrast(1.05)}
+.feature-meta{padding:16px 20px;display:flex;flex-direction:column;justify-content:center}
+.feature-kicker{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.feature-title{font-size:clamp(1.05rem,2.4vw,1.3rem);text-transform:uppercase;line-height:1.04}
+.feature-sub{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-top:6px}
+.feature-links{display:grid;grid-template-columns:repeat(2,1fr)}
+.mini-link{display:flex;align-items:center;gap:10px;padding:13px 18px;color:var(--text-2);font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;border-right:1.5px solid var(--line);border-bottom:1.5px solid var(--line);transition:background .3s var(--ease),color .3s var(--ease)}
+.mini-link:nth-child(2n),.mini-link:last-child{border-right:0}
+.mini-link:last-child:nth-child(odd){grid-column:1 / -1}
+.mini-link:hover{background:var(--accent);color:var(--accent-ink)}
+.mini-link i{width:16px;text-align:center;font-size:.95rem}
+.mini-link .icon-beatport{width:14px;height:14px;fill:currentColor}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tile{border:1.5px solid var(--line);background:var(--surface);padding:20px;min-height:118px;display:flex;flex-direction:column;justify-content:flex-end;gap:5px;position:relative;overflow:hidden;color:var(--text);transition:background .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+.tile:hover{border-color:var(--accent);background:var(--surface-2);transform:translateY(-3px)}
+.tile .sc{position:absolute;top:16px;left:18px;color:var(--text-3);font-size:1.05rem;transition:color .35s var(--ease)}
+.tile:hover .sc{color:var(--accent)}
+.tile .title{font-family:var(--display);font-weight:600;font-size:1rem;text-transform:uppercase;line-height:1.06}
+.tile .sub{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3)}
+.lh-foot{margin-top:clamp(40px,6vw,64px);padding-top:24px;border-top:1.5px solid var(--line);text-align:center}
+.lh-foot p{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-3);line-height:1.8;margin:0}
+.lh-foot a{color:var(--accent)}
+.lh-foot .hr{color:var(--warm)}
+@media(max-width:560px){.feature-links{grid-template-columns:1fr}.mini-link:nth-child(2n){border-right:0}.tiles{grid-template-columns:1fr}}
+</style>
+  <link href="../assets/images/favicon.png" rel="shortcut icon">
 </head>
-
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5T87PLM6"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <main class="wrap">
-    <section class="panel" aria-label="Dyson Hope link hub">
-      <header class="profile">
-        <img class="avatar" src="../assets/images/img-mask-avatar-3xl.jpg" alt="Dyson Hope profile photo" />
-        <h1>Dyson Hope</h1>
-        <p class="desc">Founder of <a href="https://sigilzero.com" target="_blank" rel="noopener" data-track="true" data-entity="label" data-action="click" data-target="sigilzero" data-platform="website" data-page-type="links">SIGIL.ZERO Records</a>. I make music. Then people dance.</p>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5T87PLM6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap">
+<header class="nav" style="position:static">
+  <div class="container nav-inner">
+    <a href="/" class="brand" aria-label="Dyson Hope — home">
+      <svg class="mk" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 6 L88.1 28 L88.1 72 L50 94 L11.9 72 L11.9 28 Z" stroke-width="7" stroke-linejoin="round"/><path d="M11.9 28 L50 50 M88.1 28 L50 50 M50 50 L50 94" stroke-width="5" stroke-linejoin="round" stroke-dasharray="7 6"/></svg>
+      <span style="margin-left:13px;font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:1rem">Dyson Hope</span>
+    </a>
+    <nav class="nav-links"><a href="/#listen">Listen</a><a href="/#contact" class="cta">Contact</a></nav>
+  </div>
+</header>
 
-        <nav class="icons" aria-label="Platform links">
-          <a class="icon-btn" href="https://dysonhope.com" target="_blank" rel="noopener" aria-label="DysonHope.com" title="DysonHope.com">
-            <i class="bi bi-house-fill"></i>
-          </a>
-          <a class="icon-btn" href="http://instagram.com/DysonHopeMusic" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" data-track="true" data-entity="social" data-action="click" data-target="instagram" data-platform="instagram" data-page-type="links">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a class="icon-btn" href="https://open.spotify.com/artist/61OXIOIVIfdZtFBZG4cY4J?si=xT6AT10GQ5CPuRu1Ahvf3A" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links">
-            <i class="fab fa-spotify"></i>
-          </a>
-          <a class="icon-btn" href="https://www.beatport.com/artist/dyson-hope/2262866" target="_blank" rel="noopener" aria-label="Beatport" title="Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links">
-            <img class="icon-beatport" src="../assets/svg/beatport.svg" alt="" aria-hidden="true" />
-          </a>
-          <a class="icon-btn" href="https://soundcloud.com/dyson-hope" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links">
-            <i class="fab fa-soundcloud"></i>
-          </a>
-          <a class="icon-btn" href="https://www.youtube.com/@DysonHope" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a class="icon-btn" href="https://dysonhope.bandcamp.com/" target="_blank" rel="noopener" aria-label="Bandcamp" title="Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links">
-            <i class="fab fa-bandcamp"></i>
-          </a>
-          <a class="icon-btn" href="https://music.apple.com/us/artist/dyson-hope/1658448375" target="_blank" rel="noopener" aria-label="Apple Music" title="Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links">
-            <i class="fab fa-apple"></i>
-          </a>
-          <a class="icon-btn" href="https://music.amazon.com/artists/B0BP9TJ341/dyson-hope" target="_blank" rel="noopener" aria-label="Amazon Music" title="Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links">
-            <i class="fab fa-amazon"></i>
-          </a>
-          <a class="icon-btn" href="https://facebook.com/dysonhopemusic" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" data-track="true" data-entity="social" data-action="click" data-target="facebook" data-platform="facebook" data-page-type="links">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </nav>
-      </header>
+<main class="lh">
+  <header class="lh-head">
+    <img class="lh-avatar" src="../assets/images/img-mask-avatar-3xl@2x.jpg" alt="Dyson Hope profile photo">
+    <h1>Dyson Hope</h1>
+    <p class="lh-desc">Founder of <a href="https://sigilzero.com" target="_blank" rel="noopener" data-track="true" data-entity="label" data-action="click" data-target="sigilzero" data-platform="website" data-page-type="links">SIGIL.ZERO Records</a>. I make music. Then people dance.</p>
+    <nav class="icons" aria-label="Platform links">
+      <a class="icon-btn" href="https://dysonhope.com" target="_blank" rel="noopener" aria-label="DysonHope.com" title="DysonHope.com"><i class="fa-solid fa-house"></i></a>
+      <a class="icon-btn" href="http://instagram.com/DysonHopeMusic" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" data-track="true" data-entity="social" data-action="click" data-target="instagram" data-platform="instagram" data-page-type="links"><i class="fa-brands fa-instagram"></i></a>
+      <a class="icon-btn" href="https://open.spotify.com/artist/61OXIOIVIfdZtFBZG4cY4J?si=xT6AT10GQ5CPuRu1Ahvf3A" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links"><i class="fa-brands fa-spotify"></i></a>
+      <a class="icon-btn" href="https://www.beatport.com/artist/dyson-hope/2262866" target="_blank" rel="noopener" aria-label="Beatport" title="Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true" style="width:17px;height:17px;fill:currentColor"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg></a>
+      <a class="icon-btn" href="https://soundcloud.com/dyson-hope" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links"><i class="fa-brands fa-soundcloud"></i></a>
+      <a class="icon-btn" href="https://www.youtube.com/@DysonHope" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links"><i class="fa-brands fa-youtube"></i></a>
+      <a class="icon-btn" href="https://dysonhope.bandcamp.com/" target="_blank" rel="noopener" aria-label="Bandcamp" title="Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links"><i class="fa-brands fa-bandcamp"></i></a>
+      <a class="icon-btn" href="https://music.apple.com/us/artist/dyson-hope/1658448375" target="_blank" rel="noopener" aria-label="Apple Music" title="Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links"><i class="fa-brands fa-apple"></i></a>
+      <a class="icon-btn" href="https://music.amazon.com/artists/B0BP9TJ341/dyson-hope" target="_blank" rel="noopener" aria-label="Amazon Music" title="Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links"><i class="fa-brands fa-amazon"></i></a>
+      <a class="icon-btn" href="https://facebook.com/dysonhopemusic" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" data-track="true" data-entity="social" data-action="click" data-target="facebook" data-platform="facebook" data-page-type="links"><i class="fa-brands fa-facebook"></i></a>
+    </nav>
+  </header>
 
-      <div class="cta-group" role="group" aria-label="Contact options">
-        <a class="cta-btn cta-btn--primary" href="mailto:booking@dysonhope.com?subject=Booking%20Inquiry%20-%20Dyson%20Hope" data-track="true" data-entity="cta" data-action="click" data-target="booking" data-page-type="links" data-cta-type="booking">Book Dyson Hope</a>
-        <a class="cta-btn cta-btn--secondary" href="mailto:studio@dysonhope.com?subject=Production%20%2F%20Collaboration%20%2F%20Promo%20Inquiry" data-track="true" data-entity="cta" data-action="click" data-target="studio_work" data-page-type="links" data-cta-type="studio_work">Production, Collaboration, &amp; Promos</a>
-      </div>
+  <div class="lh-cta" role="group" aria-label="Contact options">
+    <a class="btn btn--primary" href="mailto:booking@dysonhope.com?subject=Booking%20Inquiry%20-%20Dyson%20Hope" data-track="true" data-entity="cta" data-action="click" data-target="booking" data-page-type="links" data-cta-type="booking">Book Dyson Hope <span class="arw">→</span></a>
+    <a class="btn btn--ghost" href="mailto:studio@dysonhope.com?subject=Production%20%2F%20Collaboration%20%2F%20Promo%20Inquiry" data-track="true" data-entity="cta" data-action="click" data-target="studio_work" data-page-type="links" data-cta-type="studio_work">Production, Collaboration &amp; Promos</a>
+  </div>
 
-      <div class="section-title">New Releases</div>
+  <div class="section-title"><b>◆</b> New Releases</div>
 
-      <section class="feature" aria-label="Drums in the Deep featured release">
-        <div class="feature-top">
-          <div class="bg bg-drums-in-the-deep"></div>
-          <div class="veil"></div>
-          <div class="meta">
-            <div class="feature-kicker">Single</div>
-            <h2 class="feature-title">Dyson Hope - Drums in the Deep</h2>
-            <p class="feature-sub">SIGIL.ZERO Records</p>
-          </div>
-        </div>
+  <section class="feature" aria-label="Drums in the Deep">
+    <div class="feature-top">
+      <img class="feature-cover" src="../assets/images/drums-in-the-deep-cover-128@2x.jpg" alt="Drums in the Deep cover">
+      <div class="feature-meta"><div class="feature-kicker">Single</div><h2 class="feature-title">Drums in the Deep</h2><p class="feature-sub">SIGIL.ZERO Records</p></div>
+    </div>
+    <div class="feature-links">
+      <a class="mini-link" href="https://open.spotify.com/track/1Mf5ctX2YOynHmY6mtpDqA?si=dce39204e70a46a7" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Drums in the Deep"><i class="fa-brands fa-spotify"></i> Spotify</a>
+      <a class="mini-link" href="https://www.beatport.com/release/drums-in-the-deep/6801128" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Drums in the Deep"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg> Beatport</a>
+      <a class="mini-link" href="https://soundcloud.com/dyson-hope/drums-in-the-deep" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Drums in the Deep"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+      <a class="mini-link" href="https://youtu.be/BEDoNNxFGk" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Drums in the Deep"><i class="fa-brands fa-youtube"></i> YouTube Music</a>
+      <a class="mini-link" href="https://music.apple.com/us/song/drums-in-the-deep/1893114388" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Drums in the Deep"><i class="fa-brands fa-apple"></i> Apple Music</a>
+      <a class="mini-link" href="https://music.amazon.com/tracks/B0GX2PB5YR" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Drums in the Deep"><i class="fa-brands fa-amazon"></i> Amazon Music</a>
+      <a class="mini-link" href="https://dysonhope.bandcamp.com/track/drums-in-the-deep" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Drums in the Deep"><i class="fa-brands fa-bandcamp"></i> Bandcamp</a>
+    </div>
+  </section>
 
-        <div class="feature-links" aria-label="Drums in the Deep links">
-          <a class="mini-link" href="https://open.spotify.com/track/1Mf5ctX2YOynHmY6mtpDqA?si=dce39204e70a46a7" target="_blank" rel="noopener" aria-label="Drums in the Deep on Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Drums in the Deep">
-            <i class="fab fa-spotify"></i> Spotify
-          </a>
-          <a class="mini-link" href="https://www.beatport.com/release/drums-in-the-deep/6801128" target="_blank" rel="noopener" aria-label="Drums in the Deep on Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Drums in the Deep">
-            <img class="icon-beatport" src="../assets/svg/beatport.svg" alt="" aria-hidden="true" /> Beatport
-          </a>
-          <a class="mini-link" href="https://soundcloud.com/dyson-hope/drums-in-the-deep" target="_blank" rel="noopener" aria-label="Drums in the Deep on SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Drums in the Deep">
-            <i class="fab fa-soundcloud"></i> SoundCloud
-          </a>
-          <a class="mini-link" href="https://youtu.be/BEDoNNxFGk" target="_blank" rel="noopener" aria-label="Drums in the Deep on YouTube Music" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Drums in the Deep">
-            <i class="fab fa-youtube"></i> YouTube Music
-          </a>
-          <a class="mini-link" href="https://music.apple.com/us/song/drums-in-the-deep/1893114388" target="_blank" rel="noopener" aria-label="Drums in the Deep on Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Drums in the Deep">
-            <i class="fab fa-apple"></i> Apple Music
-          </a>
-          <a class="mini-link" href="https://music.amazon.com/tracks/B0GX2PB5YR" target="_blank" rel="noopener" aria-label="Drums in the Deep on Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Drums in the Deep">
-            <i class="fab fa-amazon"></i> Amazon Music
-          </a>
-          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/drums-in-the-deep" target="_blank" rel="noopener" aria-label="Drums in the Deep on Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Drums in the Deep">
-            <i class="fab fa-bandcamp"></i> Bandcamp
-          </a>
-        </div>
-      </section>
+  <section class="feature" aria-label="Afterphase">
+    <div class="feature-top">
+      <img class="feature-cover" src="../assets/images/afterphase-cover-128@2x.jpg" alt="Afterphase cover">
+      <div class="feature-meta"><div class="feature-kicker">Single</div><h2 class="feature-title">Afterphase</h2><p class="feature-sub">SIGIL.ZERO Records</p></div>
+    </div>
+    <div class="feature-links">
+      <a class="mini-link" href="https://open.spotify.com/track/4d5G2kJ8easEvSOcHh8jeu" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Afterphase"><i class="fa-brands fa-spotify"></i> Spotify</a>
+      <a class="mini-link" href="https://www.beatport.com/release/afterphase/6836646" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Afterphase"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg> Beatport</a>
+      <a class="mini-link" href="https://soundcloud.com/dyson-hope/afterphase" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Afterphase"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+      <a class="mini-link" href="https://www.youtube.com/watch?v=Shbp1AIV4lE" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Afterphase"><i class="fa-brands fa-youtube"></i> YouTube Music</a>
+      <a class="mini-link" href="https://music.apple.com/us/song/afterphase/6762695599" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Afterphase"><i class="fa-brands fa-apple"></i> Apple Music</a>
+      <a class="mini-link" href="https://music.amazon.com/albums/B0GXXPCTF7" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Afterphase"><i class="fa-brands fa-amazon"></i> Amazon Music</a>
+      <a class="mini-link" href="https://dysonhope.bandcamp.com/track/afterphase" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Afterphase"><i class="fa-brands fa-bandcamp"></i> Bandcamp</a>
+    </div>
+  </section>
 
-      <section class="feature" aria-label="Afterphase featured release">
-        <div class="feature-top">
-          <div class="bg bg-afterphase"></div>
-          <div class="veil"></div>
-          <div class="meta">
-            <div class="feature-kicker">Single</div>
-            <h2 class="feature-title">Dyson Hope - Afterphase</h2>
-            <p class="feature-sub">SIGIL.ZERO Records</p>
-          </div>
-        </div>
+  <section class="feature" aria-label="Bounce Ritual">
+    <div class="feature-top">
+      <img class="feature-cover" src="../assets/images/bounce-ritual-cover-128@2x.jpg" alt="Bounce Ritual cover">
+      <div class="feature-meta"><div class="feature-kicker">Single</div><h2 class="feature-title">Bounce Ritual</h2><p class="feature-sub">SIGIL.ZERO Records</p></div>
+    </div>
+    <div class="feature-links">
+      <a class="mini-link" href="https://open.spotify.com/track/6Ux3QOJXW5rTkKLRpGg73k" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Bounce Ritual"><i class="fa-brands fa-spotify"></i> Spotify</a>
+      <a class="mini-link" href="https://www.beatport.com/release/bounce-ritual/6586111" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Bounce Ritual"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg> Beatport</a>
+      <a class="mini-link" href="https://soundcloud.com/dyson-hope/bounce-ritual" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Bounce Ritual"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+      <a class="mini-link" href="https://music.youtube.com/watch?v=AdSblAOoPBg" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Bounce Ritual"><i class="fa-brands fa-youtube"></i> YouTube Music</a>
+      <a class="mini-link" href="https://music.apple.com/us/album/bounce-ritual-single/1887343369" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Bounce Ritual"><i class="fa-brands fa-apple"></i> Apple Music</a>
+      <a class="mini-link" href="https://music.amazon.com/albums/B0GQ72P3Z1" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Bounce Ritual"><i class="fa-brands fa-amazon"></i> Amazon Music</a>
+      <a class="mini-link" href="https://dysonhope.bandcamp.com/track/bounce-ritual" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Bounce Ritual"><i class="fa-brands fa-bandcamp"></i> Bandcamp</a>
+    </div>
+  </section>
 
-        <div class="feature-links" aria-label="Afterphase links">
-          <a class="mini-link" href="https://open.spotify.com/track/4d5G2kJ8easEvSOcHh8jeu" target="_blank" rel="noopener" aria-label="Afterphase on Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Afterphase">
-            <i class="fab fa-spotify"></i> Spotify
-          </a>
-          <a class="mini-link" href="https://www.beatport.com/release/afterphase/6836646" target="_blank" rel="noopener" aria-label="Afterphase on Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Afterphase">
-            <img class="icon-beatport" src="../assets/svg/beatport.svg" alt="" aria-hidden="true" /> Beatport
-          </a>
-          <a class="mini-link" href="https://soundcloud.com/dyson-hope/afterphase" target="_blank" rel="noopener" aria-label="Afterphase on SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Afterphase">
-            <i class="fab fa-soundcloud"></i> SoundCloud
-          </a>
-          <a class="mini-link" href="https://www.youtube.com/watch?v=Shbp1AIV4lE" target="_blank" rel="noopener" aria-label="Afterphase on YouTube Music" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Afterphase">
-            <i class="fab fa-youtube"></i> YouTube Music
-          </a>
-          <a class="mini-link" href="https://music.apple.com/us/song/afterphase/6762695599" target="_blank" rel="noopener" aria-label="Afterphase on Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Afterphase">
-            <i class="fab fa-apple"></i> Apple Music
-          </a>
-          <a class="mini-link" href="https://music.amazon.com/albums/B0GXXPCTF7" target="_blank" rel="noopener" aria-label="Afterphase on Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Afterphase">
-            <i class="fab fa-amazon"></i> Amazon Music
-          </a>
-          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/afterphase" target="_blank" rel="noopener" aria-label="Afterphase on Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Afterphase">
-            <i class="fab fa-bandcamp"></i> Bandcamp
-          </a>
-        </div>
-      </section>
+  <section class="feature" aria-label="Edge of the Night">
+    <div class="feature-top">
+      <img class="feature-cover" src="../assets/images/edge-of-the-night-cover-128@2x.jpg" alt="Edge of the Night cover">
+      <div class="feature-meta"><div class="feature-kicker">Single</div><h2 class="feature-title">Edge of the Night</h2><p class="feature-sub">SIGIL.ZERO Records</p></div>
+    </div>
+    <div class="feature-links">
+      <a class="mini-link" href="https://open.spotify.com/track/7cIyq5iYjSSG0cHO0xNVAW?si=136d234d3b6b479e" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Edge of the Night"><i class="fa-brands fa-spotify"></i> Spotify</a>
+      <a class="mini-link" href="https://www.beatport.com/release/edge-of-the-night/6130961" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Edge of the Night"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg> Beatport</a>
+      <a class="mini-link" href="https://soundcloud.com/dyson-hope/edge-of-the-night" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Edge of the Night"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+      <a class="mini-link" href="https://youtu.be/ci0OXIgClxk" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Edge of the Night"><i class="fa-brands fa-youtube"></i> YouTube Music</a>
+      <a class="mini-link" href="https://music.apple.com/us/song/edge-of-the-night/1880216606" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Edge of the Night"><i class="fa-brands fa-apple"></i> Apple Music</a>
+      <a class="mini-link" href="https://music.amazon.com/albums/B0GQ72P3Z1" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Edge of the Night"><i class="fa-brands fa-amazon"></i> Amazon Music</a>
+      <a class="mini-link" href="https://dysonhope.bandcamp.com/track/edge-of-the-night" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Edge of the Night"><i class="fa-brands fa-bandcamp"></i> Bandcamp</a>
+    </div>
+  </section>
 
-     <section class="feature" aria-label="Bounce Ritual featured release">
-        <div class="feature-top">
-          <div class="bg bg-bounce-ritual"></div>
-          <div class="veil"></div>
-          <div class="meta">
-            <div class="feature-kicker">Single</div>
-            <h2 class="feature-title">Dyson Hope - Bounce Ritual</h2>
-            <p class="feature-sub">SIGIL.ZERO Records</p>
-          </div>
-        </div>
+  <section class="feature" aria-label="Got a Body">
+    <div class="feature-top">
+      <img class="feature-cover" src="../assets/images/got-a-body-cover-128@2x.jpg" alt="Got a Body cover">
+      <div class="feature-meta"><div class="feature-kicker">Single</div><h2 class="feature-title">Got a Body</h2><p class="feature-sub">SIGIL.ZERO Records</p></div>
+    </div>
+    <div class="feature-links">
+      <a class="mini-link" href="https://open.spotify.com/album/14TppZqOBVHtvYeLLo61Og?si=_3BDfnBFSeKzC0oLSCHi-g" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Got a Body"><i class="fa-brands fa-spotify"></i> Spotify</a>
+      <a class="mini-link" href="https://www.beatport.com/release/got-a-body/6130500" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Got a Body"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg> Beatport</a>
+      <a class="mini-link" href="https://soundcloud.com/dyson-hope/got-a-body" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Got a Body"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+      <a class="mini-link" href="https://youtu.be/2AHC65J_xUw?si=Z1Jc_T3LZtbIiSSi" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Got a Body"><i class="fa-brands fa-youtube"></i> YouTube Music</a>
+      <a class="mini-link" href="https://music.apple.com/us/album/got-a-body/1859086878" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Got a Body"><i class="fa-brands fa-apple"></i> Apple Music</a>
+      <a class="mini-link" href="https://music.amazon.com/albums/B0G5F96WF3" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Got a Body"><i class="fa-brands fa-amazon"></i> Amazon Music</a>
+      <a class="mini-link" href="https://dysonhope.bandcamp.com/track/got-a-body" target="_blank" rel="noopener" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Got a Body"><i class="fa-brands fa-bandcamp"></i> Bandcamp</a>
+    </div>
+  </section>
 
-        <div class="feature-links" aria-label="Bounce Ritual links">
-          <a class="mini-link" href="https://open.spotify.com/track/6Ux3QOJXW5rTkKLRpGg73k" target="_blank" rel="noopener" aria-label="Bounce Ritual on Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Bounce Ritual">
-            <i class="fab fa-spotify"></i> Spotify
-          </a>
-          <a class="mini-link" href="https://www.beatport.com/release/bounce-ritual/6586111" target="_blank" rel="noopener" aria-label="Bounce Ritual on Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Bounce Ritual">
-            <img class="icon-beatport" src="../assets/svg/beatport.svg" alt="" aria-hidden="true" /> Beatport
-          </a>
-          <a class="mini-link" href="https://soundcloud.com/dyson-hope/bounce-ritual" target="_blank" rel="noopener" aria-label="Bounce Ritual on SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Bounce Ritual">
-            <i class="fab fa-soundcloud"></i> SoundCloud
-          </a>
-          <a class="mini-link" href="https://music.youtube.com/watch?v=AdSblAOoPBg" target="_blank" rel="noopener" aria-label="Bounce Ritual on YouTube Music" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Bounce Ritual">
-            <i class="fab fa-youtube"></i> YouTube Music
-          </a>
-          <a class="mini-link" href="https://music.apple.com/us/album/bounce-ritual-single/1887343369" target="_blank" rel="noopener" aria-label="Bounce Ritual on Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Bounce Ritual">
-            <i class="fab fa-apple"></i> Apple Music
-          </a>
-          <a class="mini-link" href="https://music.amazon.com/albums/B0GQ72P3Z1" target="_blank" rel="noopener" aria-label="Bounce Ritual on Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Bounce Ritual">
-            <i class="fab fa-amazon"></i> Amazon Music
-          </a>
-          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/bounce-ritual" target="_blank" rel="noopener" aria-label="Bounce Ritual on Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Bounce Ritual">
-            <i class="fab fa-bandcamp"></i> Bandcamp
-          </a>
-        </div>
-      </section>
+  <div class="section-title"><b>◆</b> Mixtapes</div>
 
-      <section class="feature" aria-label="Edge of the Night featured release">
-        <div class="feature-top">
-          <div class="bg bg-edge-of-the-night"></div>
-          <div class="veil"></div>
-          <div class="meta">
-            <div class="feature-kicker">Single</div>
-            <h2 class="feature-title">Dyson Hope - Edge of the Night</h2>
-            <p class="feature-sub">SIGIL.ZERO Records</p>
-          </div>
-        </div>
+  <section class="tiles" aria-label="Mixtapes">
+    <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-the-caribbean" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live in the Caribbean"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Live in the Caribbean</p><p class="sub">Breakbeat set</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-denver" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live in Denver"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Live in Denver</p><p class="sub">Tech house set</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-austin" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live in Austin"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Live in Austin</p><p class="sub">Gangsta-themed bass music set</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-art-car-bass" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Art Car Bass"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Art Car Bass</p><p class="sub">Live at Burning Man 2025</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-sound-camp-house" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Sound Camp House"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Sound Camp House</p><p class="sub">Live at Burning Man 2025</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-deep-playa-techno" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Deep Playa Techno"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Deep Playa Techno</p><p class="sub">Live at Burning Man 2025</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/live-at-the-matrix-rave-bass-set" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live at The Matrix Rave (bass set)"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Matrix Rave — Bass Set</p><p class="sub">One of two sets for a themed rave</p></a>
+    <a class="tile" href="https://soundcloud.com/dyson-hope/live-at-the-matrix-rave-techno-set" target="_blank" rel="noopener" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live at The Matrix Rave (techno set)"><i class="fa-brands fa-soundcloud sc"></i><p class="title">Matrix Rave — Techno Set</p><p class="sub">Showcasing original unreleased tracks</p></a>
+  </section>
 
-        <div class="feature-links" aria-label="Edge of the Night links">
-          <a class="mini-link" href="https://open.spotify.com/track/7cIyq5iYjSSG0cHO0xNVAW?si=136d234d3b6b479e" target="_blank" rel="noopener" aria-label="Edge of the Night on Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Edge of the Night">
-            <i class="fab fa-spotify"></i> Spotify
-          </a>
-          <a class="mini-link" href="https://www.beatport.com/release/edge-of-the-night/6130961" target="_blank" rel="noopener" aria-label="Edge of the Night on Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Edge of the Night">
-            <img class="icon-beatport" src="../assets/svg/beatport.svg" alt="" aria-hidden="true" /> Beatport
-          </a>
-          <a class="mini-link" href="https://soundcloud.com/dyson-hope/edge-of-the-night" target="_blank" rel="noopener" aria-label="Edge of the Night on SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Edge of the Night">
-            <i class="fab fa-soundcloud"></i> SoundCloud
-          </a>
-          <a class="mini-link" href="https://youtu.be/ci0OXIgClxk" target="_blank" rel="noopener" aria-label="Edge of the Night on YouTube Music" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Edge of the Night">
-            <i class="fab fa-youtube"></i> YouTube Music
-          </a>
-          <a class="mini-link" href="https://music.apple.com/us/song/edge-of-the-night/1880216606" target="_blank" rel="noopener" aria-label="Edge of the Night on Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Edge of the Night">
-            <i class="fab fa-apple"></i> Apple Music
-          </a>
-          <a class="mini-link" href="https://music.amazon.com/albums/B0GQ72P3Z1" target="_blank" rel="noopener" aria-label="Edge of the Night on Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Edge of the Night">
-            <i class="fab fa-amazon"></i> Amazon Music
-          </a>
-          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/edge-of-the-night" target="_blank" rel="noopener" aria-label="Edge of the Night on Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Edge of the Night">
-            <i class="fab fa-bandcamp"></i> Bandcamp
-          </a>
-        </div>
-      </section>
-
-      <section class="feature" aria-label="Got a Body featured release">
-        <div class="feature-top">
-          <div class="bg bg-got-a-body"></div>
-          <div class="veil"></div>
-          <div class="meta">
-            <div class="feature-kicker">Single</div>
-            <h2 class="feature-title">Dyson Hope - Got a Body</h2>
-            <p class="feature-sub">SIGIL.ZERO Records</p>
-          </div>
-        </div>
-
-        <div class="feature-links" aria-label="Edge of the Night links">
-          <a class="mini-link" href="https://open.spotify.com/album/14TppZqOBVHtvYeLLo61Og?si=_3BDfnBFSeKzC0oLSCHi-g" target="_blank" rel="noopener" aria-label="Edge of the Night on Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links" data-release-title="Got a Body">
-            <i class="fab fa-spotify"></i> Spotify
-          </a>
-         <a class="mini-link" href="https://www.beatport.com/release/got-a-body/6130500" target="_blank" rel="noopener" aria-label="Got a Body on Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links" data-release-title="Got a Body">
-          <img class="icon-beatport" src="../assets/svg/beatport.svg" alt="" aria-hidden="true" /> Beatport
-          </a>
-         <a class="mini-link" href="https://soundcloud.com/dyson-hope/got-a-body" target="_blank" rel="noopener" aria-label="Edge of the Night on SoundCloud" data-track="true" data-entity="release" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-release-title="Got a Body">
-            <i class="fab fa-soundcloud"></i> SoundCloud
-          </a>
-          <a class="mini-link" href="https://youtu.be/2AHC65J_xUw?si=Z1Jc_T3LZtbIiSSi" target="_blank" rel="noopener" aria-label="Got a Body on YouTube Music" data-track="true" data-entity="release" data-action="click" data-target="youtube_music" data-platform="youtube_music" data-page-type="links" data-release-title="Got a Body">
-            <i class="fab fa-youtube"></i> YouTube Music
-          </a>
-          <a class="mini-link" href="https://music.apple.com/us/album/got-a-body/1859086878" target="_blank" rel="noopener" aria-label="Got a Body on Apple Music" data-track="true" data-entity="release" data-action="click" data-target="apple_music" data-platform="apple_music" data-page-type="links" data-release-title="Got a Body">
-            <i class="fab fa-apple"></i> Apple Music
-          </a>
-          <a class="mini-link" href="https://music.amazon.com/albums/B0G5F96WF3" target="_blank" rel="noopener" aria-label="Got a Body on Amazon Music" data-track="true" data-entity="release" data-action="click" data-target="amazon_music" data-platform="amazon_music" data-page-type="links" data-release-title="Got a Body">
-            <i class="fab fa-amazon"></i> Amazon Music
-          </a>
-          <a class="mini-link" href="https://dysonhope.bandcamp.com/track/got-a-body" target="_blank" rel="noopener" aria-label="Got a Body on Bandcamp" data-track="true" data-entity="release" data-action="click" data-target="bandcamp" data-platform="bandcamp" data-page-type="links" data-release-title="Got a Body">
-            <i class="fab fa-bandcamp"></i> Bandcamp
-          </a>
-        </div>
-      </section>
-
-      <div class="section-title">Mixtapes</div>
-
-      <section class="tiles" aria-label="Mixtapes">
-        <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-the-caribbean" target="_blank" rel="noopener" aria-label="Live in the Caribbean" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live in the Caribbean">
-          <div class="bg bg-live-caribbean"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Live in the Caribbean</p>
-            <p class="sub">Breakbeat set</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-denver" target="_blank" rel="noopener" aria-label="Live in Denver" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live in Denver">
-          <div class="bg bg-live-denver"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Live in Denver</p>
-            <p class="sub">Tech house set</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/live-in-austin" target="_blank" rel="noopener" aria-label="Live in Austin" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live in Austin">
-          <div class="bg bg-live-austin"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Live in Austin</p>
-            <p class="sub">Gangsta-themed bass music set</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-art-car-bass" target="_blank" rel="noopener" aria-label="Art Car Bass (live at Burning Man 2025)" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Art Car Bass">
-          <div class="bg bg-art-car-bass"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Art Car Bass</p>
-            <p class="sub">Live at Burning Man 2025</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-sound-camp-house" target="_blank" rel="noopener" aria-label="Sound Camp House (live at Burning Man 2025)" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Sound Camp House">
-          <div class="bg bg-sound-camp-house"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Sound Camp House</p>
-            <p class="sub">Live at Burning Man 2025</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/burning-man-2025-deep-playa-techno" target="_blank" rel="noopener" aria-label="Deep Playa Techno (live at Burning Man 2025)" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Deep Playa Techno">
-          <div class="bg bg-deep-playa-techno"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Deep Playa Techno</p>
-            <p class="sub">Live at Burning Man 2025</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/live-at-the-matrix-rave-bass-set" target="_blank" rel="noopener" aria-label="Live at The Matrix Rave (bass set)" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live at The Matrix Rave (bass set)">
-          <div class="bg bg-matrix-rave"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Live at The Matrix Rave (bass set)</p>
-            <p class="sub">One of two sets for a themed rave</p>
-          </div>
-        </a>
-
-        <a class="tile" href="https://soundcloud.com/dyson-hope/live-at-the-matrix-rave-techno-set" target="_blank" rel="noopener" aria-label="Live at The Matrix Rave (techno set)" data-track="true" data-entity="mix" data-action="click" data-target="soundcloud" data-platform="soundcloud" data-page-type="links" data-mix-title="Live at The Matrix Rave (techno set)">
-          <div class="bg bg-matrix-rave"></div>
-          <div class="veil"></div>
-          <div class="content">
-            <p class="title">Live at The Matrix Rave (techno set)</p>
-            <p class="sub">Showcasing original unreleased tracks</p>
-          </div>
-        </a>
-      </section>
-
-      <div class="footer-block">
-        <div class="text-center col-12 col-lg text-lg-left">
-          <p>&copy;
-            <script type="text/javascript">document.write(new Date().getFullYear());</script> Dyson
-            Hope, All Rights Reserved<br />Made with ♥️ in Austin, Texas<br /><a
-              href="mailto:info@dysonhope.com" data-track="true" data-entity="cta" data-action="click" data-target="info_email" data-page-type="links" data-cta-type="email">info@dysonhope.com</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="../assets/js/tracking.js"></script>
+  <div class="lh-foot">
+    <p>&copy; <span id="yr">2026</span> Dyson Hope, All Rights Reserved<br>Made with <span class="hr">&hearts;</span> in Austin, Texas<br><a href="mailto:info@dysonhope.com" data-track="true" data-entity="cta" data-action="click" data-target="info_email" data-page-type="links" data-cta-type="email">info@dysonhope.com</a></p>
+  </div>
+</main>
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

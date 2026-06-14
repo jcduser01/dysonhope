@@ -1,4 +1,27 @@
 //
+// Dyson Hope — Industrial Brutalism Design Language (INI-041)
+// Tokens PREPENDED to _variables.scss; override Bootstrap defaults below.
+//
+$dh-ground:        #191919;
+$dh-surface:       #202020;
+$dh-line:          #343434;
+$dh-text:          #EDEDED;
+$dh-text-2:        #9C9CA0;
+$dh-accent:        #9C97F4;
+$dh-accent-bright: #B7B2FF;
+$dh-accent-ink:    #141318;
+$dh-warm:          #E8B27C;
+
+$font-family-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+$font-family-body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+$font-family-mono:    'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+
+// Bootstrap $body-bg / $body-color overrides
+$body-bg:    $dh-ground;
+$body-color: $dh-text;
+$link-color: $dh-accent;
+
+//
 // Font //
 //
 $font-family-primary: 'Open Sans', sans-serif;
