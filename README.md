@@ -56,9 +56,9 @@ In 2026 he founded **SIGIL.ZERO Records**, an underground electronic imprint wit
 
 ## Tech Stack
 
-The site is a hand-built static site — no framework, no JavaScript libraries, and no build step.
+The site is a hand-built static site — no framework, no JavaScript libraries, and no build server.
 
-- **HTML5** — three standalone pages, no templating.
+- **HTML5** — hand-authored pages, no framework templating. The `/blog/` section is rendered from Markdown to committed static HTML by a small generator (see [Writing (Blog)](#writing-blog)); everything served is still plain static HTML.
 - **CSS** — a single hand-written design system in `assets/css/dysonhope.css` (CSS custom properties for color, type, spacing, and motion), supplemented by small page-specific `<style>` blocks inlined in each page's `<head>`.
 - **Typography** — Google Fonts: [Archivo](https://fonts.google.com/specimen/Archivo) (display), [Inter](https://fonts.google.com/specimen/Inter) (body), and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (labels/meta).
 - **Icons** — [Font Awesome](https://fontawesome.com) (webfont via `css/all.css`). The brand mark and wordmark are inline SVG.
@@ -74,6 +74,11 @@ There is **no** Bootstrap, jQuery, carousel/lightbox/scroll-animation library, S
 ├── index.html              # homepage
 ├── calendar/index.html     # booking-calendar interstitial (redirect)
 ├── links/index.html        # link-in-bio hub
+├── privacy/index.html      # privacy policy
+├── blog/                   # GENERATED blog — listing, per-post pages, RSS (do not hand-edit)
+├── content/blog/           # blog post sources (Markdown + YAML frontmatter)
+├── templates/blog/         # blog templates (post.html, index.html)
+├── blog.config.json        # blog generator config (paths + site metadata)
 ├── CNAME                    # custom domain (dysonhope.com)
 └── assets/
     ├── css/dysonhope.css    # the design system (only stylesheet)
@@ -106,6 +111,50 @@ No build step is required. Edit the HTML/CSS directly.
 - **`index.html`** — main artist page: video hero, statement bar, **Listen** (platform links + Spotify embed), **Works** (release grid), about/interlude, **Contact** (mailto CTAs), and a social/connections footer. Single-page anchor nav (`#home`, `#listen`, `#works`, `#contact`).
 - **`links/index.html`** — "link in bio" hub with featured releases (per-platform outbound links) and streaming/social tiles. Self-contained inline styling on top of the shared design system.
 - **`calendar/index.html`** — a branded interstitial that auto-redirects (3s `meta refresh` + JS fallback) to the Google Appointments booking calendar. It is intentionally unlisted (the homepage nav link is commented out) and reached as a direct/shared link.
+- **`blog/`** — the writing section, reachable from the **Blog** link in the main navigation (between Works and Links). The pages here are generated; see [Writing (Blog)](#writing-blog).
+
+### Writing (Blog)
+
+The `/blog/` section is long-form writing — studio notes and music writing — reachable from the **Blog** link in the main navigation. It keeps the site's "commit static HTML, no server" model: posts are authored in Markdown and rendered to static HTML by a small generator, and the **rendered HTML is committed** — there is no CMS, build server, or CI.
+
+```
+content/blog/<YYYY-MM-DD-slug>.md   Post source (Markdown + YAML frontmatter)
+templates/blog/post.html            Per-post template (site chrome + typography)
+templates/blog/index.html           Listing template; the card markup between
+                                     <!-- BEGIN POST_CARD --> / <!-- END POST_CARD --> repeats per post
+blog.config.json                    Generator config (source/template/output paths + site metadata)
+
+blog/index.html                     GENERATED listing
+blog/<slug>/index.html              GENERATED post page
+blog/feed.xml                       GENERATED RSS feed
+```
+
+The `blog/` directory is generated output — **do not hand-edit it**. Edit the Markdown source or the templates, then regenerate.
+
+**Post frontmatter:**
+
+```yaml
+title:         "Post title"        # required
+date:          2026-06-23          # required; ISO date; drives ordering + RSS
+slug:          optional            # derived from title if absent
+tags:          [studio notes]      # optional
+excerpt:       "One-line summary"  # optional; used for listing + meta description; auto-derived if absent
+draft:         false               # true = the post is skipped by the generator
+cover_image:   assets/blog/x.jpg   # optional; used for the social/og:image
+canonical_url: optional            # optional; set only when syndicating the post elsewhere
+```
+
+**Publishing a post:**
+
+1. Add `content/blog/<YYYY-MM-DD-slug>.md` with frontmatter and a Markdown body.
+2. Regenerate with the blog generator (Python; requires the `markdown` and `pyyaml` packages), pointing it at `blog.config.json`. It renders every non-draft post and (re)writes the `blog/` directory deterministically.
+3. Commit the new Markdown **and** the regenerated `blog/` files, then open a PR from the fork. Merging to the canonical default branch publishes to [dysonhope.com/blog/](https://dysonhope.com/blog/).
+
+Blog asset and navigation links are root-relative (`/assets/...`, `/blog/`), so preview by serving the **repo root** and visiting `/blog/`:
+
+```bash
+python3 -m http.server 8000   # then open http://localhost:8000/blog/
+```
 
 ### Contact and booking flow
 
@@ -119,7 +168,7 @@ All contact is handled via `mailto:` links — there is no form or backend.
 
 ## Analytics
 
-Page analytics run through **Google Tag Manager** (container `GTM-5T87PLM6`), loaded on all three pages with the standard `<noscript>` fallback. GTM is the only third-party script embedded in the site.
+Page analytics run through **Google Tag Manager** (container `GTM-5T87PLM6`), loaded on every page (including the generated blog pages) behind the cookie-consent gate. GTM is the only third-party script embedded in the site.
 
 To support event mapping in the tag manager, interactive elements (CTAs, platform/store links, social links, release/mix items) carry declarative data attributes that describe the interaction:
 

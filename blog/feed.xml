@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Dyson Hope — Writing</title>
+    <link>https://dysonhope.com/blog/</link>
+    <description>Long-form writing from Dyson Hope.</description>
+    <lastBuildDate>Tue, 23 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Long Version</title>
+      <link>https://dysonhope.com/blog/the-long-version/</link>
+      <guid isPermaLink="true">https://dysonhope.com/blog/the-long-version/</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>A record is the short version. This is where the long version lives — the rooms, the gear, and the reasons behind the tracks.</description>
+    </item>
+  </channel>
+</rss>
