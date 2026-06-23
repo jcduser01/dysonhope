@@ -27,37 +27,65 @@
 	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Privacy Policy — Dyson Hope">
-	<meta name="robots" content="noindex">
-	<title>Privacy Policy — Dyson Hope</title>
+	<meta name="description" content="A record is the short version. This is where the long version lives — the rooms, the gear, and the reasons behind the tracks.">
+	<link rel="canonical" href="https://dysonhope.com/blog/the-long-version/">
+	<!-- Open Graph -->
+	<meta property="og:site_name" content="Dyson Hope">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://dysonhope.com/blog/the-long-version/">
+	<meta property="og:title" content="The Long Version">
+	<meta property="og:description" content="A record is the short version. This is where the long version lives — the rooms, the gear, and the reasons behind the tracks.">
+	<meta property="og:image" content="https://dysonhope.com/assets/images/dh-social-card-1200x630.jpg">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="The Long Version">
+	<meta name="twitter:description" content="A record is the short version. This is where the long version lives — the rooms, the gear, and the reasons behind the tracks.">
+	<meta name="twitter:image" content="https://dysonhope.com/assets/images/dh-social-card-1200x630.jpg">
+	<title>The Long Version — Dyson Hope</title>
 	<!-- Favicon -->
-	<link href="../assets/images/favicon.png" rel="shortcut icon">
+	<link href="/assets/images/favicon.png" rel="shortcut icon">
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 	<!-- Icons -->
-	<link href="../assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+	<link href="/assets/plugins/font-awesome/css/all.css" rel="stylesheet">
 	<!-- Design system -->
-	<link rel="stylesheet" href="../assets/css/dysonhope.css">
+	<link rel="stylesheet" href="/assets/css/dysonhope.css">
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="Dyson Hope — Writing" href="/blog/feed.xml">
+	<!-- Blog post typography (scoped; layers on dysonhope.css tokens) -->
 	<style>
-	.priv-wrap{max-width:800px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,3.6vw,46px)}
-	.priv-wrap h1{font-size:clamp(2rem,6vw,3.4rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.95;margin-bottom:clamp(32px,4vw,56px)}
-	.priv-wrap h2{font-size:clamp(1rem,2.5vw,1.25rem);text-transform:uppercase;letter-spacing:.02em;margin:clamp(40px,5vw,64px) 0 16px;padding-top:clamp(40px,5vw,64px);border-top:1.5px solid var(--line)}
-	.priv-wrap h2:first-of-type{margin-top:0;padding-top:0;border-top:0}
-	.priv-wrap p,.priv-wrap li{color:var(--text-2);font-size:1rem;line-height:1.7;max-width:68ch}
-	.priv-wrap ul{padding-left:1.25em;margin:12px 0}
-	.priv-wrap a{color:var(--accent);border-bottom:1px solid transparent}
-	.priv-wrap a:hover{border-bottom-color:var(--accent)}
-	.priv-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:clamp(40px,5vw,64px);padding-bottom:clamp(40px,5vw,64px);border-bottom:1.5px solid var(--line)}
-	.priv-section-tag{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:8px}
+	.blog-wrap{max-width:760px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,3.6vw,46px)}
+	.blog-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:16px}
+	.blog-wrap h1{font-size:clamp(2rem,6vw,3.4rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.98;margin-bottom:20px}
+	.blog-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin:0 0 28px}
+	.blog-tags{margin-bottom:clamp(36px,5vw,56px);padding-bottom:clamp(36px,5vw,56px);border-bottom:1.5px solid var(--line)}
+	.blog-tag{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);border:1.5px solid var(--line-2);padding:5px 12px;margin:0 8px 8px 0}
+	.blog-body{color:var(--text-2);font-size:1.06rem;line-height:1.78}
+	.blog-body h2{font-family:var(--display);color:var(--text);font-size:clamp(1.3rem,3vw,1.7rem);text-transform:uppercase;letter-spacing:-.01em;line-height:1.08;margin:clamp(40px,5vw,60px) 0 16px}
+	.blog-body h3{font-family:var(--display);color:var(--text);font-size:1.2rem;text-transform:uppercase;letter-spacing:-.01em;margin:36px 0 12px}
+	.blog-body p{margin:0 0 1.4rem;max-width:68ch}
+	.blog-body ul,.blog-body ol{margin:0 0 1.4rem 1.2rem;max-width:68ch}
+	.blog-body li{margin:.4rem 0}
+	.blog-body a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+	.blog-body a:hover{border-bottom-color:var(--accent)}
+	.blog-body strong{color:var(--text)}
+	.blog-body blockquote{border-left:2px solid var(--accent);margin:1.8rem 0;padding:.4rem 0 .4rem 1.4rem;color:var(--text);font-family:var(--display);font-weight:500;font-size:1.2rem;line-height:1.3;text-transform:uppercase;letter-spacing:-.01em}
+	.blog-body code{font-family:var(--mono);background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:.1em .4em;font-size:.86em;color:var(--text)}
+	.blog-body pre{background:var(--ground-2);border:1.5px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;overflow-x:auto;margin:0 0 1.6rem}
+	.blog-body pre code{background:transparent;border:0;padding:0;font-size:.86rem;color:var(--text-2)}
+	.blog-body img{max-width:100%;height:auto;border:1.5px solid var(--line);margin:1.6rem 0}
+	.blog-body hr{border:0;border-top:1.5px solid var(--line);margin:2.4rem 0}
+	.blog-backlink{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-top:clamp(40px,5vw,56px);padding-top:clamp(36px,5vw,48px);border-top:1.5px solid var(--line);border-bottom:1px solid transparent}
+	.blog-backlink:hover{color:var(--accent)}
 	</style>
 </head>
 <body>
 
 <!-- Cookie consent bar -->
 <div id="dh-cookie-bar" role="dialog" aria-label="Cookie consent" aria-live="polite" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--ground-2);border-top:1.5px solid var(--line-2);padding:16px clamp(22px,3.6vw,46px);align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-  <p style="margin:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-2);max-width:60ch;"><span style="color:var(--accent);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-right:12px;">[ Analytics ]</span>This site uses Google Analytics to understand how visitors engage with the music. No personal data is sold or shared.</p>
+  <p style="margin:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-2);max-width:60ch;"><span style="color:var(--accent);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-right:12px;">[ Analytics ]</span>This site uses Google Analytics to understand how visitors engage with the music. No personal data is sold or shared. <a href="/privacy/" style="color:var(--text);border-bottom:1px solid var(--line-2);">Privacy policy</a>.</p>
   <div style="display:flex;gap:10px;flex-shrink:0;">
     <button onclick="dhConsent.decline()" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1.5px solid var(--line-2);color:var(--text-2);padding:9px 18px;cursor:pointer;">Decline</button>
     <button onclick="dhConsent.accept()" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);border:1.5px solid var(--accent);color:var(--accent-ink);padding:9px 18px;cursor:pointer;">Accept</button>
@@ -81,8 +109,8 @@
       <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="/#listen">Listen</a>
         <a href="/#works">Works</a>
-        <a href="/blog/" data-track="true" data-entity="cta" data-action="click" data-target="blog" data-page-type="privacy">Blog</a>
-        <a href="/links/" data-track="true" data-entity="cta" data-action="click" data-target="links" data-page-type="privacy">Links &rarr;</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/links/" data-track="true" data-entity="cta" data-action="click" data-target="links" data-page-type="blog-post">Links &rarr;</a>
         <a href="/#contact" class="cta">Contact</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
@@ -93,47 +121,28 @@
 <!-- MAIN -->
 <main id="main">
   <div class="container">
-    <div class="priv-wrap">
-
-      <span class="priv-section-tag">[ Legal ]</span>
-      <h1>Privacy Policy</h1>
-      <p class="priv-meta">Dyson Hope &mdash; dysonhope.com &mdash; Last updated: June 2026</p>
-
-      <h2>What this site is</h2>
-      <p>dysonhope.com is the official artist website for Dyson Hope, an electronic music producer and DJ based in Austin, Texas. This policy explains what data is collected when you visit, and how it is used.</p>
-
-      <h2>Analytics</h2>
-      <p>This site uses Google Analytics 4 (GA4) via Google Tag Manager (GTM-5T87PLM6) to understand how visitors engage with the music and content. Analytics only loads if you click <strong>Accept</strong> on the cookie consent bar.</p>
-      <p>When analytics is active, Google may collect:</p>
-      <ul>
-        <li>Pages visited and links clicked</li>
-        <li>Approximate geographic location (country / region level)</li>
-        <li>Browser and device type</li>
-        <li>Referral source (how you arrived at the site)</li>
-      </ul>
-      <p>This data is aggregated and anonymous. It is used solely to understand which releases and content resonate with the audience. No data is sold, shared with third parties for advertising, or used to build individual profiles.</p>
-      <p>Google's own privacy practices are governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-
-      <h2>Cookies</h2>
-      <p>The only first-party cookie this site stores is <code>dh_cookie_consent</code> — a single value (accepted / declined) that remembers your analytics preference. No tracking cookies are set before you make a choice. If you click Decline, no analytics cookies are ever written.</p>
-      <p>Google Analytics sets its own cookies only after consent is given. You can clear all cookies by clearing your browser's site data for dysonhope.com.</p>
-
-      <h2>Contact forms and email</h2>
-      <p>The contact section links directly to email addresses (<a href="mailto:booking@dysonhope.com">booking@dysonhope.com</a> and <a href="mailto:studio@dysonhope.com">studio@dysonhope.com</a>). No form submissions are stored on this server — email goes directly to the artist's inbox and is handled under normal email privacy expectations.</p>
-
-      <h2>Third-party embeds and links</h2>
-      <p>This site links to external platforms (Spotify, SoundCloud, Beatport, YouTube, Bandcamp, Instagram, Facebook). Following those links takes you off this site and into each platform's own privacy environment. This policy does not cover third-party platforms.</p>
-
-      <h2>Data retention</h2>
-      <p>No personal data is stored on this site's servers. Analytics data retained by Google follows Google's standard retention settings (default: 14 months). You can request deletion via <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">Google's data controls</a>.</p>
-
-      <h2>Your choices</h2>
-      <p>You can withdraw analytics consent at any time by clearing your browser's local storage for dysonhope.com — the consent bar will reappear on your next visit, and you can choose Decline. Alternatively, use your browser's built-in privacy controls or a content blocker to prevent analytics loading.</p>
-
-      <h2>Contact</h2>
-      <p>Questions about this policy: <a href="mailto:info@dysonhope.com">info@dysonhope.com</a></p>
-
-    </div>
+    <article class="blog-wrap">
+      <span class="blog-eyebrow">[ Writing ]</span>
+      <h1>The Long Version</h1>
+      <p class="blog-meta"><time datetime="2026-06-23">June 23, 2026</time></p>
+      <div class="blog-tags"><span class="blog-tag">studio notes</span><span class="blog-tag">underground</span></div>
+      <div class="blog-body">
+        <p>A track is a compression. Three to eight minutes that have to carry everything — the room it was built for, the night it's aiming at, the thirty years of records that taught me what a kick drum is supposed to do to a body. The track ships. The rest gets left on the cutting room floor.</p>
+<p>This is where the rest goes.</p>
+<h2>Why bother</h2>
+<p>I've spent most of my life inside underground dance culture — techno, house, breakbeat, and bass, built for physical spaces and loud systems. None of that fits in a caption. The story of a release is usually more interesting than the marketing copy a release gets, and I'd rather tell it straight than let a platform's algorithm tell it for me.</p>
+<p>So this is the long version. Studio notes. Why a track sounds the way it does. What broke and what I kept. The records and rooms that pulled a session in a direction I didn't plan.</p>
+<h2>What this isn't</h2>
+<p>It isn't a newsletter funnel and it isn't content for content's sake. There's no schedule I'm promising to hit. When there's something worth saying that's longer than a post and slower than a release, it lands here, on a page I own, on the site I own.</p>
+<blockquote>
+<p>The music is the work. This is the margin notes.</p>
+</blockquote>
+<h2>Where to find the music</h2>
+<p>If you came here for the records, they're a click away — <a href="https://sigilzero.com">the releases live on SIGIL.ZERO</a>, and every platform is collected on the <a href="/links/">links page</a>. Start there. Then, if you want the long version, come back.</p>
+<p>— Dyson Hope</p>
+      </div>
+      <a class="blog-backlink" href="/blog/">&larr; All writing</a>
+    </article>
   </div>
 </main>
 

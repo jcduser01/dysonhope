@@ -1,0 +1,8 @@
+{
+  "content": "content/blog",
+  "templates": "templates/blog",
+  "out": "blog",
+  "site_title": "Dyson Hope",
+  "blog_url": "https://dysonhope.com/blog",
+  "author": "Dyson Hope"
+}
