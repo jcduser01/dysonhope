@@ -52,6 +52,16 @@
 	<link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
 	<!-- Design system -->
 	<link rel="stylesheet" href="assets/css/dysonhope.css">
+	<!-- Schedule section (Cal.com embed) — page-specific layout -->
+	<style>
+	.sched{display:block;max-width:920px}
+	.sched-lead{margin-bottom:clamp(20px,3.4vw,38px)}
+	.sched-lead .eyebrow b{color:var(--accent)}
+	.sched-sub{color:var(--text-2);max-width:54ch;margin:14px 0 0;font-size:1.05rem;line-height:1.5}
+	.sched-embed{position:relative;width:100%}
+	.sched-embed iframe{display:block;border:none;width:100%;min-height:680px;color-scheme:dark}
+	@media(max-width:560px){.sched-embed iframe{min-height:760px}}
+	</style>
 </head>
 <body>
 <!-- Cookie consent bar -->
@@ -313,6 +323,27 @@
   </div>
 </section>
 
+<!-- SCHEDULE -->
+<!-- Studio booking via Cal.com inline embed (jasoncookdesign/studio). Always visible; anchor-reachable only (no nav item). "Schedule" names studio booking; "Calendar" is reserved for live event dates below. -->
+<section id="schedule">
+  <div class="container sec-pad">
+    <div class="sec-head reveal"><span class="tag">[ 05 ]</span><h2>Schedule</h2><span class="meta">Studio Session &middot; Book a Time</span></div>
+    <div class="sched reveal">
+      <div class="sched-lead">
+        <p class="eyebrow"><b>&#9670;</b> Studio booking</p>
+        <p class="sched-sub">Pick an open slot for a studio session &mdash; 2, 3, or 4 hours. Booking happens right here, on the site; no redirect.</p>
+      </div>
+      <div class="sched-embed">
+        <iframe
+          src="https://cal.com/jasoncookdesign/studio?embed=true&theme=dark&brandColor=9C97F4&hideEventTypeDetails=false&layout=month_view"
+          title="Book a studio session with Dyson Hope"
+          loading="lazy"
+          data-track="true" data-entity="cta" data-action="view" data-target="studio_session" data-page-type="home" data-cta-type="schedule"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CALENDAR -->
 <!-- Live event dates: populate .events div when confirmed dates exist. Remove section + nav link when empty. -->
 <!--
@@ -330,7 +361,7 @@
 <!-- CONNECTIONS -->
 <section id="connections">
   <div class="container sec-pad">
-    <div class="sec-head reveal"><span class="tag">[ 05 ]</span><h2>Connections</h2><span class="meta">Ecosystem</span></div>
+    <div class="sec-head reveal"><span class="tag">[ 06 ]</span><h2>Connections</h2><span class="meta">Ecosystem</span></div>
     <div class="eco reveal">
       <a href="https://sigilzero.com" target="_blank" rel="noopener" data-track="true" data-entity="label" data-action="click" data-target="sigilzero" data-platform="website" data-page-type="home"><span class="role">Record Label</span><span class="nm">SIGIL.ZERO</span><span class="arw2">Disciplined, DJ-first releases &#8599;</span></a>
       <a href="./links/index.html" data-track="true" data-entity="cta" data-action="click" data-target="links" data-page-type="home"><span class="role">All Platforms</span><span class="nm">Links</span><span class="arw2">Every destination, one page &rarr;</span></a>
