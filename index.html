@@ -52,15 +52,21 @@
 	<link href="assets/plugins/font-awesome/css/all.css" rel="stylesheet">
 	<!-- Design system -->
 	<link rel="stylesheet" href="assets/css/dysonhope.css">
-	<!-- Schedule section (Cal.com embed) — page-specific layout -->
+	<!-- Schedule section (Cal.com embed) — brutalist two-column grid (mirrors #contact .book) -->
 	<style>
-	.sched{display:block;max-width:920px}
-	.sched-lead{margin-bottom:clamp(20px,3.4vw,38px)}
+	.sched{position:relative;overflow:hidden;border:1.5px solid var(--line);display:grid;grid-template-columns:.9fr 1.6fr;background:radial-gradient(70% 130% at 88% 12%,rgba(156,151,244,.16),transparent 60%),var(--surface)}
+	.sched-lead{position:relative;z-index:1;display:flex;flex-direction:column;padding:clamp(28px,4vw,48px);border-right:1.5px solid var(--line)}
+	.sched-lead .eyebrow{margin-bottom:18px}
 	.sched-lead .eyebrow b{color:var(--accent)}
-	.sched-sub{color:var(--text-2);max-width:54ch;margin:14px 0 0;font-size:1.05rem;line-height:1.5}
-	.sched-embed{position:relative;width:100%}
-	.sched-embed iframe{display:block;border:none;width:100%;min-height:680px;color-scheme:dark}
-	@media(max-width:560px){.sched-embed iframe{min-height:760px}}
+	.sched-lead h2{font-size:clamp(1.7rem,3.4vw,2.6rem);margin-bottom:16px}
+	.sched-copy{color:var(--text-2);font-size:1rem;line-height:1.55;margin:0 0 26px;max-width:34ch}
+	.sched-durs{list-style:none;margin:auto 0 0;padding:0}
+	.sched-durs li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1.5px solid var(--line);color:var(--text-2);font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+	.sched-durs li:first-child{border-top:1.5px solid var(--line)}
+	.sched-durs li::before{content:"";width:6px;height:6px;background:var(--accent);transform:rotate(45deg);flex:none}
+	.sched-embed{position:relative;z-index:1;min-width:0}
+	.sched-embed iframe{display:block;border:none;width:100%;height:100%;min-height:680px;color-scheme:dark}
+	@media(max-width:880px){.sched{grid-template-columns:1fr}.sched-lead{border-right:0;border-bottom:1.5px solid var(--line)}.sched-embed iframe{min-height:720px}}
 	</style>
 </head>
 <body>
@@ -331,7 +337,13 @@
     <div class="sched reveal">
       <div class="sched-lead">
         <p class="eyebrow"><b>&#9670;</b> Studio booking</p>
-        <p class="sched-sub"> Recording, production, mixing, and mastering services.<br>Book a studio session for 2, 3, or 4 hours.</p>
+        <h2>Book the studio.</h2>
+        <p class="sched-copy">Recording, production, mixing, and mastering services.</p>
+        <ul class="sched-durs">
+          <li>2 hours</li>
+          <li>3 hours</li>
+          <li>4 hours</li>
+        </ul>
       </div>
       <div class="sched-embed">
         <iframe
