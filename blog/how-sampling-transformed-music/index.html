@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Cookie consent + GTM loader -->
+	<script>
+	(function(){
+	  var CONSENT_KEY='dh_cookie_consent';
+	  var GTM_ID='GTM-5T87PLM6';
+	  function loadGTM(){
+	    window.dataLayer=window.dataLayer||[];
+	    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+	    var f=document.getElementsByTagName('script')[0],j=document.createElement('script');
+	    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+GTM_ID;
+	    f.parentNode.insertBefore(j,f);
+	  }
+	  window.dhConsent={
+	    accept:function(){localStorage.setItem(CONSENT_KEY,'accepted');loadGTM();dhConsent._hide()},
+	    decline:function(){localStorage.setItem(CONSENT_KEY,'declined');dhConsent._hide()},
+	    _hide:function(){var b=document.getElementById('dh-cookie-bar');if(b)b.style.display='none'}
+	  };
+	  var saved=localStorage.getItem(CONSENT_KEY);
+	  if(saved==='accepted'){loadGTM()}
+	  else if(!saved){document.addEventListener('DOMContentLoaded',function(){
+	    var b=document.getElementById('dh-cookie-bar');if(b)b.style.display='flex';
+	  })}
+	})();
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The single most important invention in the history of music is the phonograph. The second is the sampler — and a short history of how it rewrote music, culture, and law.">
+	<link rel="canonical" href="https://dysonhope.com/blog/how-sampling-transformed-music/">
+	<!-- Open Graph -->
+	<meta property="og:site_name" content="Dyson Hope">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://dysonhope.com/blog/how-sampling-transformed-music/">
+	<meta property="og:title" content="How Sampling Transformed Music (A Short History of Sampling)">
+	<meta property="og:description" content="The single most important invention in the history of music is the phonograph. The second is the sampler — and a short history of how it rewrote music, culture, and law.">
+	<meta property="og:image" content="https://dysonhope.com/assets/images/dh-social-card-1200x630.jpg">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="How Sampling Transformed Music (A Short History of Sampling)">
+	<meta name="twitter:description" content="The single most important invention in the history of music is the phonograph. The second is the sampler — and a short history of how it rewrote music, culture, and law.">
+	<meta name="twitter:image" content="https://dysonhope.com/assets/images/dh-social-card-1200x630.jpg">
+	<title>How Sampling Transformed Music (A Short History of Sampling) — Dyson Hope</title>
+	<!-- Favicon -->
+	<link href="/assets/images/favicon.png" rel="shortcut icon">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+	<!-- Icons -->
+	<link href="/assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+	<!-- Design system -->
+	<link rel="stylesheet" href="/assets/css/dysonhope.css">
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="Dyson Hope — Writing" href="/blog/feed.xml">
+	<!-- Blog post typography (scoped; layers on dysonhope.css tokens) -->
+	<style>
+	.blog-wrap{max-width:760px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,3.6vw,46px)}
+	.blog-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:16px}
+	.blog-wrap h1{font-size:clamp(2rem,6vw,3.4rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.98;margin-bottom:20px}
+	.blog-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin:0 0 28px}
+	.blog-tags{margin-bottom:clamp(36px,5vw,56px);padding-bottom:clamp(36px,5vw,56px);border-bottom:1.5px solid var(--line)}
+	.blog-tag{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);border:1.5px solid var(--line-2);padding:5px 12px;margin:0 8px 8px 0}
+	.blog-body{color:var(--text-2);font-size:1.06rem;line-height:1.78}
+	.blog-body h2{font-family:var(--display);color:var(--text);font-size:clamp(1.3rem,3vw,1.7rem);text-transform:uppercase;letter-spacing:-.01em;line-height:1.08;margin:clamp(40px,5vw,60px) 0 16px}
+	.blog-body h3{font-family:var(--display);color:var(--text);font-size:1.2rem;text-transform:uppercase;letter-spacing:-.01em;margin:36px 0 12px}
+	.blog-body p{margin:0 0 1.4rem;max-width:68ch}
+	.blog-body ul,.blog-body ol{margin:0 0 1.4rem 1.2rem;max-width:68ch}
+	.blog-body li{margin:.4rem 0}
+	.blog-body a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+	.blog-body a:hover{border-bottom-color:var(--accent)}
+	.blog-body strong{color:var(--text)}
+	.blog-body blockquote{border-left:2px solid var(--accent);margin:1.8rem 0;padding:.4rem 0 .4rem 1.4rem;color:var(--text);font-family:var(--display);font-weight:500;font-size:1.2rem;line-height:1.3;text-transform:uppercase;letter-spacing:-.01em}
+	.blog-body code{font-family:var(--mono);background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:.1em .4em;font-size:.86em;color:var(--text)}
+	.blog-body pre{background:var(--ground-2);border:1.5px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;overflow-x:auto;margin:0 0 1.6rem}
+	.blog-body pre code{background:transparent;border:0;padding:0;font-size:.86rem;color:var(--text-2)}
+	.blog-body img{max-width:100%;height:auto;border:1.5px solid var(--line);margin:1.6rem 0}
+	.blog-body hr{border:0;border-top:1.5px solid var(--line);margin:2.4rem 0}
+	.blog-backlink{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-top:clamp(40px,5vw,56px);padding-top:clamp(36px,5vw,48px);border-top:1.5px solid var(--line);border-bottom:1px solid transparent}
+	.blog-backlink:hover{color:var(--accent)}
+	</style>
+</head>
+<body>
+
+<!-- Cookie consent bar -->
+<div id="dh-cookie-bar" role="dialog" aria-label="Cookie consent" aria-live="polite" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--ground-2);border-top:1.5px solid var(--line-2);padding:16px clamp(22px,3.6vw,46px);align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+  <p style="margin:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--text-2);max-width:60ch;"><span style="color:var(--accent);font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-right:12px;">[ Analytics ]</span>This site uses Google Analytics to understand how visitors engage with the music. No personal data is sold or shared. <a href="/privacy/" style="color:var(--text);border-bottom:1px solid var(--line-2);">Privacy policy</a>.</p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="dhConsent.decline()" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:transparent;border:1.5px solid var(--line-2);color:var(--text-2);padding:9px 18px;cursor:pointer;">Decline</button>
+    <button onclick="dhConsent.accept()" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);border:1.5px solid var(--accent);color:var(--accent-ink);padding:9px 18px;cursor:pointer;">Accept</button>
+  </div>
+</div>
+
+<a href="#main" class="skip">Skip to content</a>
+<div class="wrap">
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="brand" aria-label="Dyson Hope home">
+      <svg class="mk" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M50 6 L88.1 28 L88.1 72 L50 94 L11.9 72 L11.9 28 Z" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M11.9 28 L50 50 M88.1 28 L50 50 M50 50 L50 94" stroke-width="5" stroke-linejoin="round" stroke-dasharray="7 6"/>
+      </svg>
+      <span class="wmwrap" aria-hidden="true"><svg viewBox="0 0 504 108"><path d="M73.22,53.27c0,4.13-.7,7.93-2.1,11.41-1.38,3.45-3.34,6.43-5.88,8.92-2.52,2.49-5.56,4.44-9.11,5.84s-7.5,2.1-11.84,2.1h-21.73V25.03h21.73c4.34,0,8.28.7,11.84,2.1,3.56,1.4,6.59,3.36,9.11,5.88,2.54,2.49,4.5,5.46,5.88,8.92,1.4,3.45,2.1,7.23,2.1,11.33h0ZM61.23,53.27c0-2.96-.39-5.62-1.17-7.98-.78-2.36-1.9-4.36-3.35-6-1.45-1.63-3.23-2.89-5.34-3.78-2.08-.88-4.44-1.32-7.09-1.32h-9.97v38.2h9.97c2.65,0,5.01-.43,7.09-1.29,2.1-.88,3.88-2.14,5.34-3.78,1.45-1.66,2.57-3.67,3.35-6.04.78-2.36,1.17-5.04,1.17-8.02h0Z"/><path d="M99.57,59.81v21.73h-11.68v-21.73l-20.52-34.78h10.28c1.01,0,1.82.25,2.41.74.62.47,1.12,1.08,1.48,1.83l9.27,17.8c.62,1.19,1.18,2.31,1.67,3.35.52,1.04.97,2.08,1.36,3.11.36-1.04.78-2.08,1.25-3.11.49-1.07,1.04-2.18,1.64-3.35l9.19-17.8c.31-.62.78-1.21,1.4-1.75.62-.55,1.43-.82,2.41-.82h10.36l-20.52,34.78h0Z"/><path d="M149.49,35.86c-.36.6-.74,1.04-1.13,1.33-.36.26-.84.39-1.44.39s-1.19-.2-1.87-.58c-.65-.42-1.42-.86-2.3-1.32-.88-.47-1.9-.9-3.04-1.29-1.14-.42-2.48-.62-4.01-.62-2.7,0-4.73.61-6.08,1.83-1.35,1.19-2.03,2.76-2.03,4.71,0,1.25.36,2.29,1.09,3.11.75.8,1.73,1.51,2.92,2.1,1.22.6,2.6,1.13,4.13,1.6,1.53.47,3.1.99,4.71,1.56,1.61.55,3.18,1.19,4.71,1.95,1.53.75,2.89,1.7,4.09,2.84,1.22,1.14,2.19,2.54,2.92,4.21.75,1.64,1.13,3.64,1.13,6,0,2.57-.45,4.99-1.36,7.24-.88,2.23-2.17,4.19-3.85,5.88-1.69,1.66-3.78,2.97-6.27,3.93-2.47.96-5.27,1.44-8.41,1.44-1.79,0-3.58-.18-5.37-.54-1.77-.36-3.48-.87-5.14-1.52-1.64-.65-3.18-1.43-4.63-2.34-1.45-.91-2.73-1.92-3.82-3.04l3.43-5.53c.29-.42.66-.75,1.13-1.01.47-.29.96-.43,1.48-.43.7,0,1.44.26,2.22.78.78.52,1.67,1.09,2.69,1.71,1.01.62,2.18,1.19,3.51,1.71,1.35.52,2.96.78,4.83.78,2.73,0,4.83-.62,6.31-1.87,1.51-1.25,2.26-3.1,2.26-5.57,0-1.43-.38-2.58-1.13-3.47-.73-.88-1.69-1.62-2.88-2.22-1.19-.6-2.56-1.1-4.09-1.52-1.53-.44-3.1-.92-4.71-1.44-1.61-.52-3.18-1.14-4.71-1.87-1.53-.73-2.9-1.69-4.09-2.88-1.19-1.19-2.17-2.67-2.92-4.44-.73-1.77-1.09-3.96-1.09-6.58,0-2.1.42-4.14,1.25-6.11.83-1.97,2.05-3.73,3.66-5.26,1.61-1.53,3.58-2.76,5.92-3.7,2.36-.93,5.06-1.4,8.1-1.4,3.4,0,6.54.53,9.42,1.6,2.91,1.04,5.36,2.49,7.36,4.36l-2.88,5.49h0Z"/><path d="M263.75,25.03v56.51h-6.04c-.91,0-1.67-.14-2.3-.43-.62-.31-1.23-.83-1.83-1.56l-28.16-35.83c.08.91.13,1.8.16,2.69.05.88.08,1.7.08,2.45v32.67h-10.32V25.03h6.15c.49,0,.91.03,1.25.08.36.03.69.12.97.27.28.13.56.31.82.54.26.23.55.55.86.93l28.35,35.98c-.1-.99-.18-1.93-.23-2.84-.05-.93-.08-1.82-.08-2.65V25.03h10.32Z"/><polygon points="338.9 25.03 338.9 81.54 327.14 81.54 327.14 57.2 302.26 57.2 302.26 81.54 290.5 81.54 290.5 25.03 302.26 25.03 302.26 49.02 327.14 49.02 327.14 25.03 338.9 25.03 338.9 25.03"/><path d="M419.38,53.15c3.66,0,6.33-.88,8.02-2.65,1.71-1.77,2.57-4.18,2.57-7.24,0-1.4-.22-2.67-.66-3.82-.42-1.17-1.06-2.15-1.95-2.96-.86-.83-1.95-1.47-3.27-1.91-1.32-.44-2.89-.66-4.71-.66h-7.4v19.24h7.4ZM419.38,25.03c3.87,0,7.2.45,10.01,1.36,2.83.91,5.15,2.18,6.97,3.82,1.82,1.61,3.15,3.53,4.01,5.76.88,2.23,1.32,4.66,1.32,7.28,0,2.78-.45,5.32-1.36,7.63-.91,2.31-2.28,4.3-4.13,5.96-1.84,1.66-4.17,2.96-6.97,3.89-2.8.91-6.09,1.36-9.85,1.36h-7.4v19.43h-11.68V25.03h19.08Z"/><polygon points="456.61 34.18 456.61 48.71 475.46 48.71 475.46 57.55 456.61 57.55 456.61 72.39 480.83 72.39 480.83 81.54 444.85 81.54 444.85 25.03 480.83 25.03 480.83 34.18 456.61 34.18 456.61 34.18"/><path d="M183.5,22.54l-26.36,18.42v25.5l26.36,18.42,27.07-18.42v-25.5l-27.07-18.42ZM200.2,60.79l-16.55,10.23-16.12-10.23v-14.16l16.12-10.23,16.55,10.23v14.16Z"/><path d="M369.5,22.54l-26.36,18.42v25.5l26.36,18.42,27.07-18.42v-25.5l-27.07-18.42ZM386.2,60.79l-16.55,10.23-16.12-10.23v-14.16l16.12-10.23,16.55,10.23v14.16Z"/></svg></span>
+    </a>
+    <div class="nav-right">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#listen">Listen</a>
+        <a href="/#works">Works</a>
+        <a href="/links/" data-track="true" data-entity="cta" data-action="click" data-target="links" data-page-type="blog-post">Links &rarr;</a>
+        <a href="/#contact" class="cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main id="main">
+  <div class="container">
+    <article class="blog-wrap">
+      <span class="blog-eyebrow">[ Writing ]</span>
+      <h1>How Sampling Transformed Music (A Short History of Sampling)</h1>
+      <p class="blog-meta"><time datetime="2023-07-30">July 30, 2023</time></p>
+      <div class="blog-tags"><span class="blog-tag">music history</span><span class="blog-tag">sampling</span><span class="blog-tag">copyright</span></div>
+      <div class="blog-body">
+        <!-- IMAGE PLACEHOLDER — HERO: studio / sampler scene. Original used on ProducerHive (provenance unclear, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/DTS_Secret_Studio_Mathew_Addington_1511-1.jpg (filename suggests a Death To Stock image by Mathew Addington). ACTION: replace with a rights-cleared or generated hero at /assets/images/blog/how-sampling-transformed-music/hero.jpg, then add a <figure> here. -->
+
+<p>The single most important invention in the history of music is the phonograph. The second most important is the sampler. Before the 1890s, people only experienced live performances, leaving those who didn't sing or play an instrument dependent on finding performers.</p>
+<p>The invention of the phonograph shattered these limitations, bringing music into homes and forever transforming our relationship with sound. Less than a century later, advancements in recording technology led to another revolution – <strong>the ability to record, manipulate, and playback sound snippets, known as "sampling."</strong></p>
+<p>This transformative technique unleashed a creative revolution, defining genres like hip-hop and electronic dance music and impacting the musical landscape, culture, and even law.</p>
+<h2>The Early Roots of Sampling</h2>
+<h3>New York City's 1977 Blackout</h3>
+<p>In 1977, New York City was going through an economic downturn. Budget cuts to public schools limited access to musical instruments, leaving aspiring musicians and producers with few resources.</p>
+<p>On July 13, 1977, amid an exhausting heatwave and after the shock of a serial killer spree, lightning took out three electrical substations on the Hudson River, sending most of the city into <a href="https://en.wikipedia.org/wiki/New_York_City_blackout_of_1977">a blackout that lasted 25 hours</a> that saw over 1,600 retail stores looted.</p>
+<p>After the darkness of that blackout, New Yorkers sparked a creative flame – samplers, turntables, speakers, and drum machines found their way into black hands for the first time, giving birth to hip-hop.</p>
+<h3>Before Sampling: The Rise of Breakbeats</h3>
+<p>In the early days of hip-hop, DJs showcased their skills by manipulating funk records. They extended drum breakdowns by "juggling" two copies of the same record to keep the beats going for the dancefloor.</p>
+<p>Later, purpose-built <a href="https://en.wikipedia.org/wiki/Battle_record">battle records</a> with looped drum breaks helped DJs create more interesting and varied beats for dance parties. The introduction of samplers changed everything. DJs and producers could record and play drum beats (and anything else), breaking free from the limitations of turntables.</p>
+<p>It opened a new world of possibilities, enabling artists to explore new sonic landscapes. Sampling became a transformative force in hip-hop and electronic music production.</p>
+<h2>Notable Works: Pioneering the Art of Sampling</h2>
+<h3>Sampling as Artistic Experimentation: <em>My Life in the Bush of Ghosts</em></h3>
+<p>In 1981, Brian Eno and David Byrne's visionary collaboration, "My Life in the Bush of Ghosts," mesmerized listeners with its innovative use of sampling.</p>
+<p>The album was the first to feature samples as a lead vocalist, seamlessly blending found sounds, vocal snippets, and drum loops – things we take for granted today but were unheard of in its time.</p>
+<p>To celebrate the album's influence on music culture, the 2006 reissue made the multi-tracks of two of the songs <a href="https://creativecommons.org/2006/11/28/remix-my-life-in-the-bush-of-ghosts/">available to download and remix under a Creative Commons license</a>.</p>
+<h3>The Golden Age of Sampling: <em>Paul's Boutique</em> and <em>3 Feet High and Rising</em></h3>
+<p>During the late '80s and early '90s, sampling reached its apex in the Golden Age of Hip-Hop. Albums like Beastie Boys' <em>Paul's Boutique</em> and De La Soul's <em>3 Feet High and Rising</em> showcased the artistry of sampling, masterfully weaving together diverse sources to create complex, sample-heavy productions.</p>
+<p>The simple process of clearing samples in the 80s made <em>Paul's Boutique</em> possible – the clearance process would be much more expensive today, putting it out of reach for anyone without deep pockets; Mike Simpson, one of the Dust Brothers, co-producers of <em>Paul's Boutique</em> said there are <a href="https://paulsboutique.info/">between 100 and 300 samples on the album</a>.</p>
+<h3>The Amen Break: The Seven-Second Sample that Spawned Entire Genres</h3>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.8rem 0;"><iframe src="https://www.youtube-nocookie.com/embed/FFKMtv8tU0U" title="The Amen Break" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<p>No discussion of sampling would be complete without mentioning the world's most well-known drum break: the "Amen Break," sampled from seven seconds from "Amen, Brother," an obscure B-side of a Grammy-winning record the soul group The Winstons recorded in 1969.</p>
+<p>This break was largely overlooked until 1986 when Street Beat Records published the original <em>Ultimate Breaks and Beats</em> battle record, including the Amen Break as the last track on side A. Salt N' Pepa used the beat on their record <em>I Desire</em> that same year, but the explosive popularity of NWA's <em>Straight Outta Compton</em> two years later made the Amen Break world famous.</p>
+<p>Since then, this break has been sampled thousands of times and used in every conceivable manner, from a simple loop played at its original tempo, sped up to suit the faster tempos common to drum and bass, and chopped and rearranged into every permutation imaginable in genres like ragga jungle and breakcore.</p>
+<p><a href="https://www.youtube.com/watch?v=5SaFTm2bcac">Nate Harrison's brilliant 2004 mini-documentary</a> is a must-watch for the depth of its exploration into the nature of culture and copyright, art and creativity, and the history of the most famous sample in the world.</p>
+<h3>Redefining Possibilities: <em>Endtroducing…</em></h3>
+<p>In 1996, DJ Shadow shattered the mold with his groundbreaking album "Endtroducing," <a href="https://en.wikipedia.org/wiki/Endtroducing.....">the first to be entirely composed of samples</a>. <strong>DJ Shadow composed the entire album by recording vinyl records into an Akai MPC60, a groundbreaking instrument that led to a groundbreaking album.</strong></p>
+<p>With its meticulous sampling craftsmanship and atmospheric soundscapes, DJ Shadow crafted a flawless artifact that showcased the sheer potential of sampling as a solo instrument.</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.8rem 0;"><iframe src="https://www.youtube-nocookie.com/embed/EEV2EqVe9vU" title="DJ Shadow — Endtroducing" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<h2>Sampling and Copyright: Shaping International Law</h2>
+<p>In the world of sampling, legal battles have shaped the music landscape and copyright law. One significant case occurred in 1989 when <a href="https://www.latimes.com/archives/la-xpm-1989-07-23-ca-392-story.html">The Turtles sued De La Soul</a> for using an uncleared sample on their album <em>3 Feet High and Rising</em>.</p>
+<p>This case set a legal precedent, dampening sampling in hip-hop. Another landmark case in 1991 involved <a href="https://www.npr.org/sections/therecord/2013/05/01/180375856/20-years-ago-biz-markie-got-the-last-laugh">Gilbert O'Sullivan suing Biz Markie</a> for sampling "Alone Again (Naturally)."</p>
+<p>The ruling stated that sampling without permission infringed copyright, leading to the album's recall until the song could be removed.</p>
+<p>Whether minimal or trivial sampling should be allowed has faced legal scrutiny. In 2000, a court ruled that the <a href="https://www.billboard.com/music/music-news/beastie-boys-emerge-victorious-in-sampling-suit-65708/">Beastie Boys' minimal sampling of James Newton's composition</a> did not require clearance.</p>
+<p>However, in a 2005 case where a company that owned the rights to some Funkadelic records <a href="https://en.wikipedia.org/wiki/Bridgeport_Music,_Inc._v._Dimension_Films">sued NWA over extremely short samples</a>, the judge ruled they were licensable. Fourteen years later, the European Court of Justice ruled that recognizable samples require permission.</p>
+<p>These legal battles and judgments have significantly impacted sampling practices.</p>
+<p>If a producer wanted to avoid potential lawsuits down the road, there were generally two options: sample obscure sources or pay hefty fees to "clear" samples, getting permission from the rights owners, typically too costly for emerging and independent artists.</p>
+<p>Some argue that these restrictions stifle creativity, while others view them as incentives for innovation.</p>
+<p>As an aside, I highly recommend watching "<a href="https://vimeo.com/8040182">RiP!: A Remix Manifesto</a>," an excellent film that explores intellectual property, fair use, and the transformative nature of sampling. The film is a mashup of a music documentary and a deep dive into copyright law that raises important questions about creativity and culture.</p>
+<h2>Technological Advancements: From Hardware to Software</h2>
+<h3>Fairlight CMI: The Pioneer of Polyphonic Sampling</h3>
+<!-- IMAGE PLACEHOLDER — Fairlight CMI (vintage polyphonic sampler). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/1999-04-fairlight-1-axSGBhDpLTBPROFDvUQDghZila.ShlrW_.jpg | original on-page credit: Sound On Sound. ACTION: drop a rights-cleared or generated image at /assets/images/blog/how-sampling-transformed-music/fairlight-cmi.jpg and add a <figure> here. -->
+
+<p>In 1979, the <a href="https://www.soundonsound.com/reviews/fairlight-cmi-retrozone">Fairlight CMI</a> emerged as the first widely used commercial sampler. Developed by Australians Kim Ryrie and Peter Vogel, this groundbreaking instrument stored samples in digital memory instead of tape and offered polyphonic sampling capabilities, enabling producers to play chords.</p>
+<h3>E-mu SP-1200: Hip-Hop's Favorite Sampler</h3>
+<!-- IMAGE PLACEHOLDER — E-mu SP-1200 (12-bit hip-hop sampler/sequencer). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/emu_sp1200.jpg | original on-page credit: Vintage Synth Explorer. ACTION: drop a rights-cleared or generated image at /assets/images/blog/how-sampling-transformed-music/emu-sp1200.jpg and add a <figure> here. -->
+
+<p>The <a href="https://www.vintagesynth.com/emu/sp1200.php">E-mu SP-1200</a>, introduced in 1987, quickly became a staple in hip-hop production. This iconic sampler combined sampling and sequencing to offer a unique workflow that shaped the genre as much as the trademark gritty sound of its 12-bit sampling engine.</p>
+<h3>Akai MPC Family: The First Playable Sampler</h3>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.8rem 0;"><iframe src="https://www.youtube-nocookie.com/embed/fC1BQNz0Aj8" title="A brief history of the Akai MPC" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<p>The <a href="https://reverb.com/news/a-brief-history-of-the-akai-mpc">Akai MPC family</a>, starting with the MPC60 in 1988, revolutionized beat-making. With their intuitive pad-based interfaces, these portable samplers empowered producers to create music with unparalleled ease and expressiveness. The MPC's influence on hip-hop and electronic dance music remains profound.</p>
+<h3>Software Sampling: The Digital Revolution</h3>
+<p>Software sampling emerged in the '90s and beyond as computer power and memory capacity grew. Today, we have powerful software applications and plugins that emulate the capabilities of hardware samplers, providing an expansive range of sampling options within our digital audio workstations.</p>
+<h2>Sampling Techniques and Styles</h2>
+<p>Sampling has played a vital role in shaping the distinct sounds and styles of electronic dance music, pop, hip-hop, and other genres. These sampling techniques, among others, empower producers to push the boundaries of creativity, allowing them to create captivating and innovative musical experiences.</p>
+<p>Chopping and rearranging samples, pitch shifting, time stretching, and granular synthesis have become deeply intertwined with the sound of modern beats.</p>
+<h3>Chopping and Rearranging Samples to Create Unique Patterns</h3>
+<p>One of the most prevalent sampling techniques is sample chopping. Producers take snippets of audio from anywhere – funk and soul records are usual suspects, but recording classical, street noises, or birdsong is just as viable.</p>
+<p>Once producers have audio material in the sampler, they apply creativity to meticulously slice and rearrange the sounds to craft intricate and dynamic patterns.</p>
+<p>By isolating specific elements from a sample and flipping them creatively, producers can create infectious rhythms and grooves that drive the energy of the music.</p>
+<p>The ability to chop and rearrange samples opens up endless possibilities for making distinctive and memorable tracks.</p>
+<p>Flipping obscure samples is the foundation of Mass Appeal's "Rhythm Roulette" video series, where notable hip-hop producers choose three records from a records store while blindfolded, then make a beat by sampling them.</p>
+<h3>Pitch Shifting, Time Stretching, and Granular Synthesis</h3>
+<p>Manipulating sample properties such as pitch, time, and texture has become a hallmark of music production, especially popular in electronic dance music.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/Pitch_shift">Pitch shifting</a> allows producers to alter the pitch of a sample</strong>, creating either the "chipmunk effect" when sounds are pitched higher than their normal tempo or a slowed-down vibe when pitched down.</p>
+<p><strong><a href="https://en.wikipedia.org/wiki/Audio_time_stretching_and_pitch_scaling">Time stretching</a>, on the other hand, enables producers to manipulate the tempo of a sample without affecting its pitch.</strong> This technique is invaluable for seamlessly integrating samples into a track with different tempos or for creating unique rhythmic effects.</p>
+<p>While modern time-stretching technology can create transparent-sounding effects that sound very natural, even at different tempos than the original recording, old-school retro time-stretching algorithms impart a grainy aesthetic to the sound, the hallmark of the classic drum and bass vibes.</p>
+<p>Another intriguing method used heavily in modern production is <a href="https://splice.com/blog/intro-granular-synthesis/">granular synthesis</a>, <strong>which can be used to pitch shift or time stretch sounds by breaking down a sample into tiny grains and manipulating them individually.</strong></p>
+<p>By manipulating the grains' parameters, such as duration, pitch, and position, producers can create intricate and evolving textures with their sounds that sound quite unlike anything else.</p>
+<p>Ableton Live's "warping" algorithm that allows producers to treat samples like elastic bands, stretching and compressing them in time, is based on granular synthesis.</p>
+<!-- IMAGE PLACEHOLDER — Ableton Live warp screenshot (transient warping). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/the_bridge_tour_lesson_the_fastest_way_to_warp_a_track_transient-2.png | original on-page credit: Ableton. ACTION: replace with your own Ableton screenshot (your own screen capture is yours to use) at /assets/images/blog/how-sampling-transformed-music/ableton-warp.png and add a <figure> here. -->
+
+<h2>Legal Considerations and Ethical Sampling Practices</h2>
+<p>As producers, it's crucial to navigate the legal and ethical aspects of sampling. Here are some key considerations:</p>
+<h3>Understanding Copyright Laws and Fair Use</h3>
+<p>Producers who use samples in recordings must learn to navigate the complex landscape of sampling and copyright and familiarize themselves with the laws and principles of fair use.</p>
+<p>Fair use laws provide a legal framework for using copyrighted material without permission. While fair use varies across jurisdictions, <strong>it generally allows for limited use of copyrighted works for purposes such as criticism, commentary, parody, or transformative creation.</strong></p>
+<p>However, applying fair use to sampling can be complex and subjective, often requiring a case-by-case analysis. Producers must navigate these laws carefully, considering the nature of the sampled material, the extent of the use, and the potential impact on the original work's market.</p>
+<h3>Royalty-Free Samples: The Safe Way to Use Samples</h3>
+<p>Producers can use a wide range of <a href="https://en.wikipedia.org/wiki/Production_music#Royalty-free_libraries">royalty-free sample libraries</a> packed with professionally recorded and curated samples without additional licensing or clearance, streamlining the creative process while ensuring legal compliance.</p>
+<p>These libraries provide a diverse selection of high-quality sounds, loops, and effects that can enhance the production value of your tracks, offering a cost-effective and efficient solution for adding depth and richness to your music.</p>
+<h3>Ethical Sampling: Give Credit Where Credit is Due</h3>
+<p>Sometimes you want to use samples of copyrighted work that isn't available royalty-free. When incorporating those kinds of samples into your productions, it is essential to show respect for the original artists' work.</p>
+<p>Cultivate a collaborative mindset by seeking permissions when necessary and valuing the creative contributions of others.</p>
+<p>By <a href="https://www.nolo.com/legal-encyclopedia/how-obtain-sample-clearance-29725.html">obtaining permissions and licenses</a>, known as "clearing" a sample, you demonstrate integrity and ensure that the original artists receive proper recognition and compensation for their work.</p>
+<p>Additionally, make it a priority to provide accurate credits and acknowledgments, allowing listeners to discover and appreciate the original sources that inspire your creations.</p>
+<p>Showcasing respect for the artists who paved the way fosters a community built on appreciation and mutual support.</p>
+<h2>The Future of Sampling: Innovation and Challenges</h2>
+<p>Sampling continues to evolve, driven by technological advancements and artistic experimentation.</p>
+<h3>Software-Powered Sample Organization</h3>
+<p>Machine learning algorithms can analyze and categorize a producer's samples, aiding quick selection and experimentation. For example, <a href="https://www.xlnaudio.com/products/xo">XO, a drum sampler by XLN Audio</a>, analyzes an entire drum sample library in minutes, "listening" to every sound and organizing them by similarity, letting producers navigate their samples in new, intuitive ways.</p>
+<h3>Challenges and Opportunities in the Digital Era</h3>
+<p>In the digital era, sampling offers unprecedented creative opportunities, but copyright restrictions and sampling limitations require diligent navigation.</p>
+<p>By understanding legal frameworks, obtaining permissions when necessary, and exploring royalty-free sample libraries, we can ethically harness the creative power of sampling.</p>
+<p>Staying informed about evolving laws and precedents is crucial for adapting our practices. Responsible sampling allows us to honor the musical history and culture while respecting original artists' rights.</p>
+<p>With knowledge and ethical practices, we can embrace the transformative potential of sampling in the digital age.</p>
+<h2>Conclusion</h2>
+<p><strong>Sampling has left an indelible mark on electronic dance music and hip-hop, fueling artistic innovation and redefining musical boundaries, shaping how we create and consume music.</strong></p>
+<p>As technology has evolved, sampling has become more accessible than ever before. Whether through hardware or software, samplers have become powerful instruments in our creative arsenal, allowing us to sculpt the sounds surrounding us all.</p>
+<p>As producers, it's vital to embrace sampling techniques while understanding and respecting the legal and ethical considerations surrounding them.</p>
+<p><strong>By doing so, we can continue to push the boundaries of music production, create vibrant, genre-defining tracks, and advance the sound of our culture.</strong></p>
+      </div>
+      <a class="blog-backlink" href="/blog/">&larr; All writing</a>
+    </article>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-cell">
+        <svg class="wmlogo" viewBox="21.73 0 482.27 108" aria-label="Dyson Hope"><path d="M73.22,53.27c0,4.13-.7,7.93-2.1,11.41-1.38,3.45-3.34,6.43-5.88,8.92-2.52,2.49-5.56,4.44-9.11,5.84s-7.5,2.1-11.84,2.1h-21.73V25.03h21.73c4.34,0,8.28.7,11.84,2.1,3.56,1.4,6.59,3.36,9.11,5.88,2.54,2.49,4.5,5.46,5.88,8.92,1.4,3.45,2.1,7.23,2.1,11.33h0ZM61.23,53.27c0-2.96-.39-5.62-1.17-7.98-.78-2.36-1.9-4.36-3.35-6-1.45-1.63-3.23-2.89-5.34-3.78-2.08-.88-4.44-1.32-7.09-1.32h-9.97v38.2h9.97c2.65,0,5.01-.43,7.09-1.29,2.1-.88,3.88-2.14,5.34-3.78,1.45-1.66,2.57-3.67,3.35-6.04.78-2.36,1.17-5.04,1.17-8.02h0Z"/><path d="M99.57,59.81v21.73h-11.68v-21.73l-20.52-34.78h10.28c1.01,0,1.82.25,2.41.74.62.47,1.12,1.08,1.48,1.83l9.27,17.8c.62,1.19,1.18,2.31,1.67,3.35.52,1.04.97,2.08,1.36,3.11.36-1.04.78-2.08,1.25-3.11.49-1.07,1.04-2.18,1.64-3.35l9.19-17.8c.31-.62.78-1.21,1.4-1.75.62-.55,1.43-.82,2.41-.82h10.36l-20.52,34.78h0Z"/><path d="M149.49,35.86c-.36.6-.74,1.04-1.13,1.33-.36.26-.84.39-1.44.39s-1.19-.2-1.87-.58c-.65-.42-1.42-.86-2.3-1.32-.88-.47-1.9-.9-3.04-1.29-1.14-.42-2.48-.62-4.01-.62-2.7,0-4.73.61-6.08,1.83-1.35,1.19-2.03,2.76-2.03,4.71,0,1.25.36,2.29,1.09,3.11.75.8,1.73,1.51,2.92,2.1,1.22.6,2.6,1.13,4.13,1.6,1.53.47,3.1.99,4.71,1.56,1.61.55,3.18,1.19,4.71,1.95,1.53.75,2.89,1.7,4.09,2.84,1.22,1.14,2.19,2.54,2.92,4.21.75,1.64,1.13,3.64,1.13,6,0,2.57-.45,4.99-1.36,7.24-.88,2.23-2.17,4.19-3.85,5.88-1.69,1.66-3.78,2.97-6.27,3.93-2.47.96-5.27,1.44-8.41,1.44-1.79,0-3.58-.18-5.37-.54-1.77-.36-3.48-.87-5.14-1.52-1.64-.65-3.18-1.43-4.63-2.34-1.45-.91-2.73-1.92-3.82-3.04l3.43-5.53c.29-.42.66-.75,1.13-1.01.47-.29.96-.43,1.48-.43.7,0,1.44.26,2.22.78.78.52,1.67,1.09,2.69,1.71,1.01.62,2.18,1.19,3.51,1.71,1.35.52,2.96.78,4.83.78,2.73,0,4.83-.62,6.31-1.87,1.51-1.25,2.26-3.1,2.26-5.57,0-1.43-.38-2.58-1.13-3.47-.73-.88-1.69-1.62-2.88-2.22-1.19-.6-2.56-1.1-4.09-1.52-1.53-.44-3.1-.92-4.71-1.44-1.61-.52-3.18-1.14-4.71-1.87-1.53-.73-2.9-1.69-4.09-2.88-1.19-1.19-2.17-2.67-2.92-4.44-.73-1.77-1.09-3.96-1.09-6.58,0-2.1.42-4.14,1.25-6.11.83-1.97,2.05-3.73,3.66-5.26,1.61-1.53,3.58-2.76,5.92-3.7,2.36-.93,5.06-1.4,8.1-1.4,3.4,0,6.54.53,9.42,1.6,2.91,1.04,5.36,2.49,7.36,4.36l-2.88,5.49h0Z"/><path d="M263.75,25.03v56.51h-6.04c-.91,0-1.67-.14-2.3-.43-.62-.31-1.23-.83-1.83-1.56l-28.16-35.83c.08.91.13,1.8.16,2.69.05.88.08,1.7.08,2.45v32.67h-10.32V25.03h6.15c.49,0,.91.03,1.25.08.36.03.69.12.97.27.28.13.56.31.82.54.26.23.55.55.86.93l28.35,35.98c-.1-.99-.18-1.93-.23-2.84-.05-.93-.08-1.82-.08-2.65V25.03h10.32Z"/><polygon points="338.9 25.03 338.9 81.54 327.14 81.54 327.14 57.2 302.26 57.2 302.26 81.54 290.5 81.54 290.5 25.03 302.26 25.03 302.26 49.02 327.14 49.02 327.14 25.03 338.9 25.03 338.9 25.03"/><path d="M419.38,53.15c3.66,0,6.33-.88,8.02-2.65,1.71-1.77,2.57-4.18,2.57-7.24,0-1.4-.22-2.67-.66-3.82-.42-1.17-1.06-2.15-1.95-2.96-.86-.83-1.95-1.47-3.27-1.91-1.32-.44-2.89-.66-4.71-.66h-7.4v19.24h7.4ZM419.38,25.03c3.87,0,7.2.45,10.01,1.36,2.83.91,5.15,2.18,6.97,3.82,1.82,1.61,3.15,3.53,4.01,5.76.88,2.23,1.32,4.66,1.32,7.28,0,2.78-.45,5.32-1.36,7.63-.91,2.31-2.28,4.3-4.13,5.96-1.84,1.66-4.17,2.96-6.97,3.89-2.8.91-6.09,1.36-9.85,1.36h-7.4v19.43h-11.68V25.03h19.08Z"/><polygon points="456.61 34.18 456.61 48.71 475.46 48.71 475.46 57.55 456.61 57.55 456.61 72.39 480.83 72.39 480.83 81.54 444.85 81.54 444.85 25.03 480.83 25.03 480.83 34.18 456.61 34.18 456.61 34.18"/><path d="M183.5,22.54l-26.36,18.42v25.5l26.36,18.42,27.07-18.42v-25.5l-27.07-18.42ZM200.2,60.79l-16.55,10.23-16.12-10.23v-14.16l16.12-10.23,16.55,10.23v14.16Z"/><path d="M369.5,22.54l-26.36,18.42v25.5l26.36,18.42,27.07-18.42v-25.5l-27.07-18.42ZM386.2,60.79l-16.55,10.23-16.12-10.23v-14.16l16.12-10.23,16.55,10.23v14.16Z"/></svg>
+        <p class="made">Made with <span class="hr">&hearts;</span> in Austin, Texas</p>
+        <p class="copy">&copy; 2026 Dyson Hope. All rights reserved.</p>
+      </div>
+      <div class="foot-cell">
+        <h5>Contact</h5>
+        <div class="chan-group">
+          <span class="label">Bookings &amp; Events</span>
+          <a class="chan" href="mailto:booking@dysonhope.com">booking@dysonhope.com</a>
+        </div>
+        <div class="chan-group">
+          <span class="label">Production &amp; Collaboration</span>
+          <a class="chan" href="mailto:studio@dysonhope.com">studio@dysonhope.com</a>
+        </div>
+      </div>
+      <div class="foot-cell">
+        <h5>Elsewhere</h5>
+        <div class="socials">
+          <a href="http://instagram.com/DysonHopeMusic" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://open.spotify.com/artist/61OXIOIVIfdZtFBZG4cY4J?si=xT6AT10GQ5CPuRu1Ahvf3A" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i> Spotify</a>
+          <a href="https://www.youtube.com/@DysonHope" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          <a href="https://soundcloud.com/dyson-hope" target="_blank" rel="noopener"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+          <a href="https://dysonhope.bandcamp.com/" target="_blank" rel="noopener"><i class="fa-brands fa-bandcamp"></i> Bandcamp</a>
+          <a href="https://facebook.com/dysonhopemusic" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span class="c">SIGIL.ZERO &mdash; SIGNAL INTEGRITY</span>
+      <div class="barcode" aria-hidden="true"></div>
+      <span class="c"><a href="/privacy/" style="color:inherit;border-bottom:1px solid var(--line-2);">Privacy</a> &nbsp;&middot;&nbsp; DYSON HOPE &copy; MMXXVI</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>20)},{passive:true});
+var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded',false)})});
+</script>
+</body>
+</html>
