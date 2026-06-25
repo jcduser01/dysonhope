@@ -7,6 +7,8 @@ excerpt: "The single most important invention in the history of music is the pho
 draft: false
 ---
 
+<!-- IMAGE PLACEHOLDER — HERO: studio / sampler scene. Original used on ProducerHive (provenance unclear, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/DTS_Secret_Studio_Mathew_Addington_1511-1.jpg (filename suggests a Death To Stock image by Mathew Addington). ACTION: replace with a rights-cleared or generated hero at /assets/images/blog/how-sampling-transformed-music/hero.jpg, then add a <figure> here. -->
+
 The single most important invention in the history of music is the phonograph. The second most important is the sampler. Before the 1890s, people only experienced live performances, leaving those who didn't sing or play an instrument dependent on finding performers.
 
 The invention of the phonograph shattered these limitations, bringing music into homes and forever transforming our relationship with sound. Less than a century later, advancements in recording technology led to another revolution – **the ability to record, manipulate, and playback sound snippets, known as "sampling."**
@@ -91,9 +93,13 @@ As an aside, I highly recommend watching "[RiP!: A Remix Manifesto](https://vime
 
 ### Fairlight CMI: The Pioneer of Polyphonic Sampling
 
+<!-- IMAGE PLACEHOLDER — Fairlight CMI (vintage polyphonic sampler). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/1999-04-fairlight-1-axSGBhDpLTBPROFDvUQDghZila.ShlrW_.jpg | original on-page credit: Sound On Sound. ACTION: drop a rights-cleared or generated image at /assets/images/blog/how-sampling-transformed-music/fairlight-cmi.jpg and add a <figure> here. -->
+
 In 1979, the [Fairlight CMI](https://www.soundonsound.com/reviews/fairlight-cmi-retrozone) emerged as the first widely used commercial sampler. Developed by Australians Kim Ryrie and Peter Vogel, this groundbreaking instrument stored samples in digital memory instead of tape and offered polyphonic sampling capabilities, enabling producers to play chords.
 
 ### E-mu SP-1200: Hip-Hop's Favorite Sampler
+
+<!-- IMAGE PLACEHOLDER — E-mu SP-1200 (12-bit hip-hop sampler/sequencer). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/emu_sp1200.jpg | original on-page credit: Vintage Synth Explorer. ACTION: drop a rights-cleared or generated image at /assets/images/blog/how-sampling-transformed-music/emu-sp1200.jpg and add a <figure> here. -->
 
 The [E-mu SP-1200](https://www.vintagesynth.com/emu/sp1200.php), introduced in 1987, quickly became a staple in hip-hop production. This iconic sampler combined sampling and sequencing to offer a unique workflow that shaped the genre as much as the trademark gritty sound of its 12-bit sampling engine.
 
@@ -140,6 +146,8 @@ Another intriguing method used heavily in modern production is [granular synthes
 By manipulating the grains' parameters, such as duration, pitch, and position, producers can create intricate and evolving textures with their sounds that sound quite unlike anything else.
 
 Ableton Live's "warping" algorithm that allows producers to treat samples like elastic bands, stretching and compressing them in time, is based on granular synthesis.
+
+<!-- IMAGE PLACEHOLDER — Ableton Live warp screenshot (transient warping). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/07/the_bridge_tour_lesson_the_fastest_way_to_warp_a_track_transient-2.png | original on-page credit: Ableton. ACTION: replace with your own Ableton screenshot (your own screen capture is yours to use) at /assets/images/blog/how-sampling-transformed-music/ableton-warp.png and add a <figure> here. -->
 
 ## Legal Considerations and Ethical Sampling Practices
 

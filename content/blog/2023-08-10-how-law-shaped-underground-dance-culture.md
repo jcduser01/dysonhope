@@ -7,6 +7,7 @@ excerpt: "Early raves attracted people with renegade spirits because they were i
 draft: false
 ---
 
+<!-- IMAGE: HERO — KEPT. This is a genuine Unsplash photo (Aleksandr Popov), free for commercial reuse under the Unsplash license; downloaded to /assets/images/blog/how-law-shaped-underground-dance-culture/rave-hero.jpg. Swap if you prefer your own/generated hero. -->
 <figure style="margin:0 0 1.8rem;"><img src="/assets/images/blog/how-law-shaped-underground-dance-culture/rave-hero.jpg" alt="Crowd at a rave with hands raised under stage lights"><figcaption style="font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin-top:8px;">Photo: Aleksandr Popov / Unsplash</figcaption></figure>
 
 In London's [Second Summer of Love](https://en.wikipedia.org/wiki/Second_Summer_of_Love) in 1989, Wayne Anthony stood outside a warehouse in his best suit, handing a police officer a business card claiming he was a record executive and claiming he had legitimately rented the warehouse for a record label party. Pounding acid house music and laser lights were pouring out of the warehouse. He lied.
@@ -91,6 +92,10 @@ Carl Loben, Editor of DJ Mag, said he lived in Hackney (in London) during the 19
 
 Loben also shared that **the organizers would pride themselves on ensuring an event was always happening, despite the legislation, in line with their renegade spirit**.
 
+<!-- IMAGE PLACEHOLDER — Acid house party photo #1 (Blackburn, Lancashire UK, 1988–91). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/08/83305513_10158045661747704_4555418549530656768_n.jpg | original on-page credit: Flashback (acidhouseflashback.co.uk). ACTION: license from Flashback or replace/generate; place at /assets/images/blog/how-law-shaped-underground-dance-culture/acid-house-1.jpg and add a <figure>. -->
+<!-- IMAGE PLACEHOLDER — Acid house party photo #2 (Blackburn, Lancashire UK, 1988–91). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/08/AcidHouse_MillHill_SMK.jpg | original on-page credit: Flashback (acidhouseflashback.co.uk). ACTION: license from Flashback or replace/generate; place at /assets/images/blog/how-law-shaped-underground-dance-culture/acid-house-2.jpg and add a <figure>. -->
+<!-- IMAGE PLACEHOLDER — Detroit rave, Gary Chandler at the Packard Plant (1990s). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/08/craving-the-rave-detroit-gary-chandler.jpeg | original on-page credit: Brian Gillespie. ACTION: license from the photographer or replace/generate; place at /assets/images/blog/how-law-shaped-underground-dance-culture/detroit-packard.jpg and add a <figure>. -->
+
 ## The 2000s: Two Paths to Mainstream Acceptance
 
 ### The UK Eased Restrictions
@@ -126,6 +131,9 @@ This transition underpinned the integration of dance music aesthetics in modern 
 The RAVE Act sparked a fierce debate among the dance music community and civil liberties groups. Critics argued that the legislation unfairly scapegoated organizers and hindered harm reduction efforts. As a result, [some artists and activists organized protests and educational campaigns](https://www.washingtonpost.com/archive/politics/2002/07/18/ravers-against-the-machine/d5f8d828-ce3c-471f-a06a-26055a1a8ada/) to raise awareness about the potential consequences of the act.
 
 Despite these challenges, the rave community in the United States persevered, finding creative ways to continue hosting events. **Many promoters collaborated with organizations dedicated to rave safety and health** to implement measures such as free water stations and drug education initiatives. The underground rave scene remained vibrant, despite the legal hurdles.
+
+<!-- IMAGE PLACEHOLDER — Rave photo #1 (DSS Channel Parties, Sydney, Australia, 2011). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/08/1923965_23451344075_3614_n.jpg | original caption: DSS Channel Parties, Sydney 2011. ACTION: source a rights-cleared or generated image; place at /assets/images/blog/how-law-shaped-underground-dance-culture/sydney-1.jpg and add a <figure>. -->
+<!-- IMAGE PLACEHOLDER — Rave photo #2 (DSS Channel Parties, Sydney, Australia, 2011). Original (ProducerHive, treat as unlicensed — DO NOT REUSE): https://producerhive.com/wp-content/uploads/2023/08/180126_10150101591149076_7354150_n.jpg | original caption: DSS Channel Parties, Sydney 2011. ACTION: source a rights-cleared or generated image; place at /assets/images/blog/how-law-shaped-underground-dance-culture/sydney-2.jpg and add a <figure>. -->
 
 ## Safety Measures and Harm Reduction
 
