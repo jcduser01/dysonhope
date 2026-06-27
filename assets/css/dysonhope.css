@@ -283,7 +283,7 @@ footer .foot-top .foot-cell:nth-child(2) .chan-group + .chan-group{margin-top:11
   .foot-top{grid-template-columns:1fr}.foot-cell{border-right:0;border-bottom:1.5px solid var(--line)}
   .nav-links{display:none}.nav-toggle{display:flex}
   .nav-links.open{display:flex;position:fixed;inset:64px 0 auto 0;flex-direction:column;background:rgba(20,20,20,.98);border-bottom:1.5px solid var(--line)}
-  .nav-links.open a{border-left:0;border-bottom:1.5px solid var(--line);padding:16px 24px}
+  .nav-links.open a{border-left:0;border-bottom:1.5px solid var(--line);padding:16px 24px;justify-content:center}
 }
 @media (max-width:640px){
   .hero-name{font-size:clamp(2.2rem,14vw,4.6rem);letter-spacing:-.03em}
