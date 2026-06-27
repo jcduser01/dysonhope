@@ -92,8 +92,8 @@
 /* Links page header is in normal flow (not fixed like the home page). It is
    given position:relative + z-index inline so its stacking context — and the
    open mobile menu it contains — paints above the avatar (which forms its own
-   stacking context via filter). Items are centered to match the page layout. */
-.nav-links.open a{justify-content:center}
+   stacking context via filter). Open-menu item centering is shared in
+   dysonhope.css (.nav-links.open a). */
 </style>
   <link href="../assets/images/favicon.png" rel="shortcut icon">
 </head>
@@ -143,6 +143,7 @@
     <p class="lh-desc">Founder of <a href="https://sigilzero.com" target="_blank" rel="noopener" data-track="true" data-entity="label" data-action="click" data-target="sigilzero" data-platform="website" data-page-type="links">SIGIL.ZERO Records</a>. I make music. Then people dance.</p>
     <nav class="icons" aria-label="Platform links">
       <a class="icon-btn" href="https://dysonhope.com" target="_blank" rel="noopener" aria-label="DysonHope.com" title="DysonHope.com"><i class="fa-solid fa-house"></i></a>
+      <a class="icon-btn" href="/blog/" aria-label="Blog" title="Blog" data-track="true" data-entity="cta" data-action="click" data-target="blog" data-platform="website" data-page-type="links"><i class="fa-solid fa-newspaper"></i></a>
       <a class="icon-btn" href="http://instagram.com/DysonHopeMusic" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" data-track="true" data-entity="social" data-action="click" data-target="instagram" data-platform="instagram" data-page-type="links"><i class="fa-brands fa-instagram"></i></a>
       <a class="icon-btn" href="https://open.spotify.com/artist/61OXIOIVIfdZtFBZG4cY4J?si=xT6AT10GQ5CPuRu1Ahvf3A" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify" data-track="true" data-entity="release" data-action="click" data-target="spotify" data-platform="spotify" data-page-type="links"><i class="fa-brands fa-spotify"></i></a>
       <a class="icon-btn" href="https://www.beatport.com/artist/dyson-hope/2262866" target="_blank" rel="noopener" aria-label="Beatport" title="Beatport" data-track="true" data-entity="release" data-action="click" data-target="beatport" data-platform="beatport" data-page-type="links"><svg class="icon-beatport" viewBox="217 233 601 748" aria-hidden="true" style="width:17px;height:17px;fill:currentColor"><path d="M817.7 763.3c0 120-95.8 217-217 217-120 0-215.8-94.6-215.8-217 0-57.6 21.8-108.5 56.4-146.7L294.6 763.3l-77-77 165.5-163.7c22.4-22.4 33.9-51.5 33.9-83.6V233.6H525.5V439c0 63-22.4 116.4-66.1 160l-4.9 4.8c38.2-35.2 90.3-56.4 146.1-56.4 123.2.1 217.1 97.7 217.1 215.9zm-98.2 0c0-64.3-53.3-116.4-118.8-116.4-66.1 0-117.6 54.6-117.6 116.4 0 63.6 52.1 117.6 117.6 117.6 67.9 0 118.8-55.1 118.8-117.6z"/></svg></a>
