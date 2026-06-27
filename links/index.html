@@ -89,6 +89,11 @@
 .lh-foot a{color:var(--accent)}
 .lh-foot .hr{color:var(--warm)}
 @media(max-width:560px){.feature-links{grid-template-columns:1fr}.mini-link:nth-child(2n){border-right:0}.tiles{grid-template-columns:1fr}}
+/* Links page header is in normal flow (not fixed like the home page). It is
+   given position:relative + z-index inline so its stacking context — and the
+   open mobile menu it contains — paints above the avatar (which forms its own
+   stacking context via filter). Items are centered to match the page layout. */
+.nav-links.open a{justify-content:center}
 </style>
   <link href="../assets/images/favicon.png" rel="shortcut icon">
 </head>
@@ -103,7 +108,7 @@
 </div>
 <!-- End Google Tag Manager (noscript) -->
 <div class="wrap">
-<header class="nav" style="position:static">
+<header class="nav" style="position:relative;z-index:60">
   <div class="container nav-inner">
     <a href="../index.html" class="brand" aria-label="Dyson Hope home">
       <svg class="mk" viewBox="0 0 100 100" fill="none" aria-hidden="true">
@@ -118,12 +123,16 @@
       <span style="margin-left:13px;font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:1rem">Dyson Hope</span>
     </a>
     -->
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/#listen">Listen</a>
-      <a href="/#works">Works</a>
-      <a href="/blog/">Blog</a>
-      <a href="/#contact" class="cta">Contact</a></nav>
+    <div class="nav-right">
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#listen">Listen</a>
+        <a href="/#works">Works</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact" class="cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
   </div>
 </header>
 
@@ -251,6 +260,13 @@
   </div>
 </main>
 </div>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+if(t&&l){
+  t.addEventListener('click',function(){var o=l.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+  l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');t.setAttribute('aria-expanded',false)})});
+}
+</script>
 </body>
 </html>
