@@ -27,17 +27,21 @@
 	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Writing from Dyson Hope — notes on electronic music, the underground, and the craft behind the records.">
-	<link rel="canonical" href="https://dysonhope.com/blog/">
+	<meta name="description" content="&lt;figure style=&quot;margin:0 0 1.8rem;&quot;&lt;img src=&quot;/assets/images/blog/choose-your-workflow-then-your-gear/hero.png&quot; alt=&quot;Choose Your Workflow, Then Your Gear&quot;&lt;figcaption…">
+	<link rel="canonical" href="https://dysonhope.com/blog/choose-your-workflow-then-your-gear/">
 	<!-- Open Graph -->
 	<meta property="og:site_name" content="Dyson Hope">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://dysonhope.com/blog/">
-	<meta property="og:title" content="Writing — Dyson Hope">
-	<meta property="og:description" content="Notes on electronic music, the underground, and the craft behind the records.">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://dysonhope.com/blog/choose-your-workflow-then-your-gear/">
+	<meta property="og:title" content="Choose Your Workflow, Then Your Gear">
+	<meta property="og:description" content="&lt;figure style=&quot;margin:0 0 1.8rem;&quot;&lt;img src=&quot;/assets/images/blog/choose-your-workflow-then-your-gear/hero.png&quot; alt=&quot;Choose Your Workflow, Then Your Gear&quot;&lt;figcaption…">
 	<meta property="og:image" content="https://dysonhope.com/assets/images/dh-social-card-1200x630.jpg">
+	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<title>Writing — Dyson Hope</title>
+	<meta name="twitter:title" content="Choose Your Workflow, Then Your Gear">
+	<meta name="twitter:description" content="&lt;figure style=&quot;margin:0 0 1.8rem;&quot;&lt;img src=&quot;/assets/images/blog/choose-your-workflow-then-your-gear/hero.png&quot; alt=&quot;Choose Your Workflow, Then Your Gear&quot;&lt;figcaption…">
+	<meta name="twitter:image" content="https://dysonhope.com/assets/images/dh-social-card-1200x630.jpg">
+	<title>Choose Your Workflow, Then Your Gear — Dyson Hope</title>
 	<!-- Favicon -->
 	<link href="/assets/images/favicon.png" rel="shortcut icon">
 	<!-- Fonts -->
@@ -50,22 +54,31 @@
 	<link rel="stylesheet" href="/assets/css/dysonhope.css">
 	<!-- RSS -->
 	<link rel="alternate" type="application/rss+xml" title="Dyson Hope — Writing" href="/blog/feed.xml">
-	<!-- Blog listing typography (scoped; layers on dysonhope.css tokens) -->
+	<!-- Blog post typography (scoped; layers on dysonhope.css tokens) -->
 	<style>
-	.blog-wrap{max-width:820px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,3.6vw,46px)}
+	.blog-wrap{max-width:760px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(22px,3.6vw,46px)}
 	.blog-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:16px}
-	.blog-wrap h1{font-size:clamp(2.2rem,7vw,3.8rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.95;margin-bottom:18px}
-	.blog-lede{color:var(--text-2);font-size:1.06rem;line-height:1.6;max-width:60ch;margin:0 0 clamp(40px,5vw,64px);padding-bottom:clamp(40px,5vw,64px);border-bottom:1.5px solid var(--line)}
-	.post-list{list-style:none;padding:0;margin:0}
-	.post-list-item{padding:clamp(28px,3.5vw,40px) 0;border-bottom:1.5px solid var(--line)}
-	.post-list-meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin:0 0 12px}
-	.post-list-item h2{font-family:var(--display);font-size:clamp(1.4rem,3.4vw,2rem);text-transform:uppercase;letter-spacing:-.02em;line-height:1.02;margin:0 0 12px}
-	.post-list-item h2 a{color:var(--text);border-bottom:1.5px solid transparent;transition:color .3s var(--ease),border-color .3s var(--ease)}
-	.post-list-item h2 a:hover{color:var(--accent);border-bottom-color:var(--accent)}
-	.post-list-excerpt{color:var(--text-2);font-size:1.02rem;line-height:1.6;margin:0;max-width:64ch}
-	.post-list-tags{margin-top:14px}
+	.blog-wrap h1{font-size:clamp(2rem,6vw,3.4rem);text-transform:uppercase;letter-spacing:-.03em;line-height:.98;margin-bottom:20px}
+	.blog-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin:0 0 28px}
+	.blog-tags{margin-bottom:clamp(36px,5vw,56px);padding-bottom:clamp(36px,5vw,56px);border-bottom:1.5px solid var(--line)}
 	.blog-tag{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);border:1.5px solid var(--line-2);padding:5px 12px;margin:0 8px 8px 0}
-	.post-list-empty{color:var(--text-3);font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:40px 0}
+	.blog-body{color:var(--text-2);font-size:1.06rem;line-height:1.78}
+	.blog-body h2{font-family:var(--display);color:var(--text);font-size:clamp(1.3rem,3vw,1.7rem);text-transform:uppercase;letter-spacing:-.01em;line-height:1.08;margin:clamp(40px,5vw,60px) 0 16px}
+	.blog-body h3{font-family:var(--display);color:var(--text);font-size:1.2rem;text-transform:uppercase;letter-spacing:-.01em;margin:36px 0 12px}
+	.blog-body p{margin:0 0 1.4rem;max-width:68ch}
+	.blog-body ul,.blog-body ol{margin:0 0 1.4rem 1.2rem;max-width:68ch}
+	.blog-body li{margin:.4rem 0}
+	.blog-body a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+	.blog-body a:hover{border-bottom-color:var(--accent)}
+	.blog-body strong{color:var(--text)}
+	.blog-body blockquote{border-left:2px solid var(--accent);margin:1.8rem 0;padding:.4rem 0 .4rem 1.4rem;color:var(--text);font-family:var(--display);font-weight:500;font-size:1.2rem;line-height:1.3;text-transform:uppercase;letter-spacing:-.01em}
+	.blog-body code{font-family:var(--mono);background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:.1em .4em;font-size:.86em;color:var(--text)}
+	.blog-body pre{background:var(--ground-2);border:1.5px solid var(--line);border-radius:6px;padding:1.1rem 1.3rem;overflow-x:auto;margin:0 0 1.6rem}
+	.blog-body pre code{background:transparent;border:0;padding:0;font-size:.86rem;color:var(--text-2)}
+	.blog-body img{max-width:100%;height:auto;border:1.5px solid var(--line);margin:1.6rem 0}
+	.blog-body hr{border:0;border-top:1.5px solid var(--line);margin:2.4rem 0}
+	.blog-backlink{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-top:clamp(40px,5vw,56px);padding-top:clamp(36px,5vw,48px);border-top:1.5px solid var(--line);border-bottom:1px solid transparent}
+	.blog-backlink:hover{color:var(--accent)}
 	</style>
 </head>
 <body>
@@ -97,7 +110,7 @@
         <a href="/">Home</a>
         <a href="/#listen">Listen</a>
         <a href="/#works">Works</a>
-        <a href="/links/" data-track="true" data-entity="cta" data-action="click" data-target="links" data-page-type="blog-index">Links &rarr;</a>
+        <a href="/links/" data-track="true" data-entity="cta" data-action="click" data-target="links" data-page-type="blog-post">Links &rarr;</a>
         <a href="/#contact" class="cta">Contact</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
@@ -108,56 +121,23 @@
 <!-- MAIN -->
 <main id="main">
   <div class="container">
-    <div class="blog-wrap">
+    <article class="blog-wrap">
       <span class="blog-eyebrow">[ Writing ]</span>
-      <h1>Writing</h1>
-      <p class="blog-lede">Notes from the studio and the floor — electronic music, the underground, and the craft behind the records.</p>
-      <ul class="post-list">
+      <h1>Choose Your Workflow, Then Your Gear</h1>
+      <p class="blog-meta"><time datetime="2026-06-29">June 29, 2026</time></p>
+      <div class="blog-tags"><span class="blog-tag">production</span></div>
+      <div class="blog-body">
+        <figure style="margin:0 0 1.8rem;"><img src="/assets/images/blog/choose-your-workflow-then-your-gear/hero.png" alt="Choose Your Workflow, Then Your Gear"><figcaption style="font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin-top:8px;">Image: Dyson Hope</figcaption></figure>
 
-        <li class="post-list-item">
-          <p class="post-list-meta"><time datetime="2026-06-29">June 29, 2026</time></p>
-          <h2><a href="choose-your-workflow-then-your-gear/">Choose Your Workflow, Then Your Gear</a></h2>
-          <p class="post-list-excerpt">&lt;figure style=&quot;margin:0 0 1.8rem;&quot;&lt;img src=&quot;/assets/images/blog/choose-your-workflow-then-your-gear/hero.png&quot; alt=&quot;Choose Your Workflow, Then Your Gear&quot;&lt;figcaption…</p>
-          <div class="post-list-tags"><span class="blog-tag">production</span></div>
-        </li>
-
-        <li class="post-list-item">
-          <p class="post-list-meta"><time datetime="2026-06-27">June 27, 2026</time></p>
-          <h2><a href="the-tool-was-never-the-problem/">The Tool Was Never the Problem</a></h2>
-          <p class="post-list-excerpt">Sampling, the drum machine, the DAW — every one of them was going to kill real music. AI is the newest moral panic in a long line. But there is a real line this time, and it isn&#x27;t the tool. It&#x27;s authorship.</p>
-          <div class="post-list-tags"><span class="blog-tag">ai</span><span class="blog-tag">authenticity</span><span class="blog-tag">underground</span></div>
-        </li>
-
-        <li class="post-list-item">
-          <p class="post-list-meta"><time datetime="2026-06-26">June 26, 2026</time></p>
-          <h2><a href="printing-your-midi/">To Producers Afraid of Printing Their MIDI</a></h2>
-          <p class="post-list-excerpt">Why committing your sound — printing MIDI to audio — is what lets it finally become something, and where the real work starts.</p>
-          <div class="post-list-tags"><span class="blog-tag">studio notes</span><span class="blog-tag">production</span></div>
-        </li>
-
-        <li class="post-list-item">
-          <p class="post-list-meta"><time datetime="2026-06-23">June 23, 2026</time></p>
-          <h2><a href="the-long-version/">The Long Version</a></h2>
-          <p class="post-list-excerpt">A record is the short version. This is where the long version lives — the rooms, the gear, and the reasons behind the tracks.</p>
-          <div class="post-list-tags"><span class="blog-tag">studio notes</span><span class="blog-tag">underground</span></div>
-        </li>
-
-        <li class="post-list-item">
-          <p class="post-list-meta"><time datetime="2023-08-10">August 10, 2023</time></p>
-          <h2><a href="how-law-shaped-underground-dance-culture/">Rave Revolution: How UK + US Laws Shaped Underground Dance Culture</a></h2>
-          <p class="post-list-excerpt">Early raves attracted people with renegade spirits because they were illegal. How four decades of UK and US law pushed dance culture underground, overground, and back again.</p>
-          <div class="post-list-tags"><span class="blog-tag">underground</span><span class="blog-tag">rave history</span><span class="blog-tag">electronic music</span><span class="blog-tag">law</span></div>
-        </li>
-
-        <li class="post-list-item">
-          <p class="post-list-meta"><time datetime="2023-07-30">July 30, 2023</time></p>
-          <h2><a href="how-sampling-transformed-music/">How Sampling Transformed Music (A Short History of Sampling)</a></h2>
-          <p class="post-list-excerpt">The single most important invention in the history of music is the phonograph. The second is the sampler — and a short history of how it rewrote music, culture, and law.</p>
-          <div class="post-list-tags"><span class="blog-tag">music history</span><span class="blog-tag">sampling</span><span class="blog-tag">copyright</span></div>
-        </li>
-
-      </ul>
-    </div>
+<p>Most people buy the thing first and figure out what to do with it second. It's a natural impulse — the gear is the exciting, tangible part, and a new controller feels like progress you can hold. But it's backward, and it's why so many setups end up being a pile of features nobody actually uses.</p>
+<p>The better question isn't "what should I buy?" It's "what do I want to be able to do?" Do you want to launch clips on the fly and improvise? Glitch loops up? Bend the tempo around? Play drum patterns with your fingers? Answer that first, in real terms, and the gear question mostly answers itself. You stop shopping for capabilities and start shopping for the specific controls that let you do the specific thing you already know you want to do.</p>
+<p>I've changed my live rig more times in the last twenty years than I can count, and the one habit that's held up through it all is starting with the controls, not the box. Figure out what your hands need to do, then work outward to the hardware that puts those controls under them.</p>
+<p>Here's how that actually plays out. At one point, I ran an Ableton Live set across eight channels — four for one "deck," four for the other, with drums, leads, bass, and everything else grouped into those four. Before I looked at a single piece of equipment, I worked out what I'd need to do to improvise well with that layout. I had to be able to fire clips from any channel, which meant buttons arranged in a grid. I had to ride each channel's level independently, which meant eight faders. And I had to crossfade between the two decks, which meant a crossfader I could assign. That's it — a button matrix, eight vertical faders, one crossfader. Now I had a shape to shop against instead of a wishlist of nice-to-haves.</p>
+<p>Then I did the same pass for effects: which ones I used, how they were routed, and what I needed my hands on to control them live. Same method — map it out as if I were designing my own custom controller from scratch, then go find the equipment that matched the map as closely as possible. Because I'd defined the controls before I went looking, I wasn't seduced by gear that did a hundred clever things I'd never touch. A box either had the controls my map called for, or it didn't. That clarity saved me money and, more than that, saved me from building a rig around someone else's idea of what a performance should be.</p>
+<p>That's the whole move, and it scales to anything, any era, any budget. Design the instrument you wish existed on paper, then go find the closest thing that's real. These days, you can even build your own custom MIDI controller from the ground up (I haven't taken it that far yet, but I've thought about it real hard). The gear isn't the point. The gear is what you reach for once you already know what you're trying to play.</p>
+      </div>
+      <a class="blog-backlink" href="/blog/">&larr; All writing</a>
+    </article>
   </div>
 </main>
 
